@@ -16,10 +16,15 @@ Ayudar a la organización del conjunto y mejorar la comunicación que facilite p
 Desarrollar e implementar un aplicativo web para mejorar la organización, comunicación y gestión de los procesos internos de un conjunto residencial, proporcionando una herramienta centralizada que facilite el acceso a la información y permita optimizar actividades como el registro y control de visitantes, la gestión y consulta de paquetes, la realización de reservas y la comunicación entre residentes, administración y portería. 
 
 ## Objetivos específicos
+
 - Permitir la reserva ágil de zonas comunes de la copropiedad de forma virtual y organizada.
+
 - Llevar un riguroso control del registro de visitantes, recepción de paquetes y solicitudes de domicilios.
+
 - Mostrar en tiempo real el estado de ocupación de los parqueaderos disponibles para carros y motos.
+
 - Facilitar el reporte de daños internos y agilizar los
+
 comunicados oficiales emitidos por la administración.
 
 ## Alcance del proyecto
