@@ -7,7 +7,7 @@ Encuesta / Observación directa
 
 https://docs.google.com/forms/d/e/1FAIpQLSf_ci3bORNPWQX4VjRPns0hHSrZB-_dBtsj1nL8Mo324vz6fA/viewform?usp=publish-editor
 
-https://docs.google.com/forms/d/e/1FAIpQLSc1OhjuUaVcAG18vfa5s6T4kFnCf2k8kHRu-v6bVxsVLJSCzQ/viewform?usp=publish-editor
+/home/nollt/Documentos/CAMPUS/docs/1_Documentos/Encuesta_CAMPUS
 
 ## Población / muestra
 98 residentes, 3 administradores de propiedad horizontal y 7 guardias de seguridad distribuidos en 3 conjuntos  residenciales urbanos.
@@ -16,7 +16,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSc1OhjuUaVcAG18vfa5s6T4kFnCf2k8kHRu-v6b
 - El 72% de personas utilizan papel y el 28% digital.
 - Las solicitudes mas comunes son de con un 35% y de dudas o pagos con un 35% y lo demas son de reportes.
 
-### Si usaron encuesta → estadística descriptiva
+### Administracion
 
 | La plataforma facilitará la administración de los datos de residentes y propietarios. | 5/5 75% |
 
@@ -26,7 +26,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSc1OhjuUaVcAG18vfa5s6T4kFnCf2k8kHRu-v6b
 
 | El sistema de reservas de zonas comunes reducirá conflictos y mejorará la organización. | 5/5 82% |
 
-| Los comunicados enviados mediante la plataforma llegarán de forma efectiva a los residentes. | 4/5 63% |
+| Los comunicados enviados mediante la plataforma llegarán de forma efectiva a los residentes. | 3/5 63% |
 
 | La plataforma facilitará el seguimiento de solicitudes, reportes y novedades. | 4/5 76% |
 
@@ -38,7 +38,29 @@ https://docs.google.com/forms/d/e/1FAIpQLSc1OhjuUaVcAG18vfa5s6T4kFnCf2k8kHRu-v6b
 
 | En general, estaré satisfecho(a) con el uso de C.A.M.P.U.S. como herramienta de administración. | 3/5 82% |
 
+## Residentes
+
+| Considero que la comunicación en mi conjunto residencial podría mejorar mediante una plataforma web. | 2/5 72% |
+
+| Actualmente existen dificultades para registrar y controlar visitantes en mi conjunto. | 1/5 89 % |
+
+| Una herramienta digital para gestionar paquetes y domicilios sería útil para los residentes. | 4/5 72% |
+
+| Considero que el proceso actual para reservar zonas comunes en mi conjunto residencial es eficiente. | 3/5 68% |
+
+| Considero importante conocer en tiempo real la disponibilidad de parqueaderos. | 4/5  56% |
+
+| Considero que los métodos actuales de registro y control de información (WhatsApp, llamadas, cuadernos, etc.) son suficientes para las necesidades del conjunto residencial. |  3/5 68% |
+
+| Me parece útil contar con un medio para reportar daños o novedades dentro del conjunto. | 4/5 81% |
+
+| Recibir comunicados de la administración a través de una plataforma web facilitaría la comunicación. | 3/5 67% |
+
+| Considero que C.A.M.P.U.S. podría mejorar la organización general del conjunto residencial. | 4/5 54% |
+
+| Me siento satisfecho(a) con la forma en que actualmente se gestionan los comunicados, visitantes, parqueaderos y demás procesos administrativos en mi conjunto residencial. | 4/5 71% |
+
 ![Gráfico de resultados](C:\Users\Adminsena\Downloads\CAMPUS\1_Documentos(circular.png,lineal.png))
 
 ## Conclusión de la recolección
-[Que la mayoría de la población creería que sería más ágil en el manejo de datos en general, porque algunas veces se demoran en averiguar datos simples, ya sea porque tardan en buscarlos o porque los papeles están en una oficina lejana.]
+[Que la mayoría de celadores creería que sería más ágil en el manejo de datos en general, porque algunas veces se demoran en averiguar datos simples, ya sea porque tardan en buscarlos o porque los papeles están en una oficina lejana.]
