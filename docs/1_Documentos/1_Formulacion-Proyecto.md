@@ -35,6 +35,5 @@ El proyecto consiste en desarrollar una plataforma web que ayude a mejorar la or
 - Comunicación Interna
 - Control y Seguridad
 
-
 ### No incluye (fuera de alcance de esta versión)
 - [...]
