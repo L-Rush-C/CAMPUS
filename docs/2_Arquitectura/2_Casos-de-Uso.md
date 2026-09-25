@@ -16,6 +16,10 @@
 | Flujos alternos  | [Qué pasa si algo falla o se desvía]         |
 | Postcondición    | [Estado del sistema al terminar]             |
 
+
+
+
+
 ### CU-01: Gestión de residentes
 | Campo            | Descripción                                  |
 |------------------|----------------------------------------------|

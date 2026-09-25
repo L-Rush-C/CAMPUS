@@ -175,8 +175,6 @@ Las prioridades marcadas son una propuesta basada en el impacto de cada función
 
 **Prioridad:** Alta
 
-> Nota: el Excel no contiene una historia identificada como HU-014.
-
 ---
 
 ## Requisitos no funcionales
