@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barra lateral</title>
-  <link rel="stylesheet" href="estilos/barra.css">
+  <title>index</title>
+  <link rel="stylesheet" href="estilos/index.css">
+  <style>
+    body {
+      min-height: 100vh;
+      background: url("imagenes/fondo.png") center / cover no-repeat fixed;
+    }
+  </style>
 </head>
 <body>
-  <aside class="barra-lateral">
-    <nav class="menu">
-      <a href="#" class="enlace">Inicio</a>
-      <a href="#" class="enlace">Pagos</a>
-      <a href="#" class="enlace">Registrar Residente</a>
-      <a href="#" class="enlace">Bicicletas</a>
-      <a href="#" class="enlace">Registrar Visitante</a>
-      <a href="#" class="enlace">Torres/Aptos</a>
-      <a href="#" class="enlace">Gestion reportes</a>
-      <a href="#" class="enlace">Zonas comunes</a>
-      <a href="#" class="enlace">Vehiculos</a>
-      <a href="#" class="enlace">Usuarios</a>
-    </nav>
-    <button type="button" class="boton-salir">Salir</button>
-  </aside>
+  <form action="">
+    <div class="inputs">
+      <input type="text" name="correo" id="correo" class="input" placeholder="correo">
+      <input type="text" name="password" id="password" class="input" placeholder="contraseña">
+    </div>
+    <div class="bajo-input">
+      <button>Iniciar sesion</button>
+      <p><a href="">olvide mi contraseña</a></p>
+    </div>
+  </form>  
 </body>
 </html>

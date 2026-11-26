@@ -1,0 +1,78 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("imagenes/fondo.png") center / cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #28444D;
+    padding: 26px;
+    border-radius: 12px;
+    transform: scale(1.5);
+}
+
+.inputs,
+.bajo-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.input {
+    color: #BDD3DE;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #6E8996;
+    margin: 8px 0px 0px 0px;
+    transition: border-bottom 0.3s ease;
+}
+
+.input:focus {
+    border-bottom: 1px solid #BDD3DE;
+    transition: border-bottom 0.3s ease ;
+}
+
+input::placeholder {
+    color: #6E8996;
+    transition: color 0.3s ease;
+}
+
+button {
+    background-color: #BDD3DE;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    margin: 12px 0px 0px 0px;
+    transition: background-color 0.3s ease,color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6E8996;
+    color: #BDD3DE;
+    transition: background-color 0.3s ease,color 0.3s ease;
+}
+
+.bajo-input p a {
+    margin: 0px;
+    color: #BDD3DE;
+    transition: color 0.3s ease;
+}
+.bajo-input p a:hover {
+    color: #92aab6;
+    transition: color 0.3s ease;
+}
