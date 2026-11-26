@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Campus</title>
+
+  <link rel="stylesheet" href="estilos/barra.css">
+</head>
+
+<body>
+  <input type="checkbox" id="nuevo-anuncio" class="control-modal">
+
+  <!-- BARRA LATERAL -->
+  <aside class="barra-lateral">
+    <nav class="menu">
+      <a href="#" class="enlace">Inicio</a>
+      <a href="#" class="enlace">Pagos</a>
+      <a href="#" class="enlace">Registrar Residente</a>
+      <a href="#" class="enlace">Bicicletas</a>
+      <a href="#" class="enlace">Registrar Visitante</a>
+      <a href="#" class="enlace">Torres/Aptos</a>
+      <a href="#" class="enlace">Gestion reportes</a>
+      <a href="#" class="enlace">Zonas comunes</a>
+      <a href="#" class="enlace">Vehiculos</a>
+      <a href="#" class="enlace">Usuarios</a>
+    </nav>
+
+    <button type="button" class="boton-salir">Salir</button>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenido">
+
+    <header class="encabezado">
+      <div class="titulos">
+        <h1>Inicio</h1>
+        <h3>Gestión de los residentes</h3>
+      </div>
+
+      <label for="nuevo-anuncio" class="boton-publicidad">
+        + Nueva publicidad
+      </label>
+    </header>
+
+    <!-- Anuncios -->
+    <section class="contenedor-publicidades">
+
+      <div class="grupo-publicidad">
+        <input type="checkbox" id="eliminar-1" class="control-eliminar">
+        <input type="checkbox" id="confirmar-1" class="control-confirmar">
+
+        <article class="tarjeta-publicidad">
+          <div class="cabecera-tarjeta">
+            <span>Pagos En Línea</span>
+            <label for="confirmar-1" class="boton-eliminar">X</label>
+          </div>
+
+          <img src="imagenes/Logo_factura.png" alt="Pagos PSE">
+        </article>
+
+        <div class="fondo-modal modal-eliminar">
+          <div class="ventana-modal ventana-eliminar">
+            <p>Seguro quieres eliminar este anuncio?</p>
+            <div class="botones-modal">
+              <label for="confirmar-1" class="boton-cancelar">Cancelar</label>
+              <label for="eliminar-1" class="boton-aceptar">Aceptar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-publicidad">
+        <input type="checkbox" id="eliminar-2" class="control-eliminar">
+        <input type="checkbox" id="confirmar-2" class="control-confirmar">
+
+        <article class="tarjeta-publicidad">
+          <div class="cabecera-tarjeta">
+            <span>Registrarme</span>
+            <label for="confirmar-2" class="boton-eliminar">X</label>
+          </div>
+
+          <img src="imagenes/Registro.png" alt="Registrarme">
+        </article>
+
+        <div class="fondo-modal modal-eliminar">
+          <div class="ventana-modal ventana-eliminar">
+            <p>Seguro quieres eliminar este anuncio?</p>
+            <div class="botones-modal">
+              <label for="confirmar-2" class="boton-cancelar">Cancelar</label>
+              <label for="eliminar-2" class="boton-aceptar">Aceptar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-publicidad tarjeta-tercera">
+        <input type="checkbox" id="eliminar-3" class="control-eliminar">
+        <input type="checkbox" id="confirmar-3" class="control-confirmar">
+
+        <article class="tarjeta-publicidad">
+          <div class="cabecera-tarjeta">
+            <span>Iniciar Sesión</span>
+            <label for="confirmar-3" class="boton-eliminar">X</label>
+          </div>
+
+          <img src="imagenes/Inicio_sesion.png" alt="Iniciar Sesión">
+        </article>
+
+        <div class="fondo-modal modal-eliminar">
+          <div class="ventana-modal ventana-eliminar">
+            <p>Seguro quieres eliminar este anuncio?</p>
+            <div class="botones-modal">
+              <label for="confirmar-3" class="boton-cancelar">Cancelar</label>
+              <label for="eliminar-3" class="boton-aceptar">Aceptar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="pie-pagina">
+      <div class="pie-informacion">
+        <strong>CAMPUS</strong>
+        <span>Gestión residencial</span>
+      </div>
+
+      
+
+      <small>&copy; 2026 CAMPUS. Todos los derechos reservados.</small>
+    </footer>
+
+  </main>
+
+  <!-- VENTANA NUEVO ANUNCIO -->
+  <div class="fondo-modal modal-publicidad">
+    <div class="ventana-modal">
+
+      <div class="titulo-modal" id="titulo-publicidad">Nuevo Anuncio</div>
+
+      <label for="nuevo-anuncio" class="cerrar-modal">X</label>
+
+      <div>
+        <div class="formulario-campos">
+
+          <div class="campo">
+            <label for="nombre-anuncio">Nombre Anuncio</label>
+            <input id="nombre-anuncio" type="text" placeholder="Nombre del anuncio">
+          </div>
+
+          <div class="campo">
+            <label for="imagen-anuncio">Archivo/Imagen:</label>
+            <input id="imagen-anuncio" type="file" accept="image/*">
+          </div>
+        </div>
+
+        <p class="aviso-formulario">
+          ES VISUAL POR AHORA :v </p>
+
+        <div class="botones-modal">
+          <label for="nuevo-anuncio" class="boton-cancelar">Cancelar</label>
+          <label for="nuevo-anuncio" class="boton-agregar">Cerrar</label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
