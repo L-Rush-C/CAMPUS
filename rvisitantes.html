@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de visitantes</title>
+  <link rel="stylesheet" href="estilos/barra.css">
+  <link rel="stylesheet" href="estilos/visitantes.css">
+</head>
+<body>
+  <aside class="barra-lateral">
+    <nav class="menu">
+      <a href="incio.html" class="enlace">Inicio</a>
+      <a href="pagos.html" class="enlace">Pagos</a>
+      <a href="rresidentes.html" class="enlace">Registrar residente</a>
+      <a href="bicicletas.html" class="enlace">Bicicletas</a>
+      <a href="rvisitantes.html" class="enlace enlace-activo" aria-current="page">Registrar visitante</a>
+      <a href="torresaptos.html" class="enlace">Torres/Aptos</a>
+      <a href="reportes.html" class="enlace">Gestionar reportes</a>
+      <a href="zonas.html" class="enlace">Zonas comunes</a>
+      <a href="vehiculo.html" class="enlace">Vehiculos</a>
+      <a href="usuarios.html" class="enlace">Usuarios</a>
+    </nav>
+    <button type="button" class="boton-salir">Salir</button>
+  </aside>
+  <main class="contenido">
+    <header class="encabezado">
+      <div class="fila-superior">
+        <h1>Registro de Visitantes</h1>
+      </div>
+      <div class="fila-inferior">
+        <p class="subtitulo">Gestion de visitantes</p>
+        <div class="controles">
+          <label class="buscador-contenedor">
+            <span class="sr-only">Buscar visitante</span>
+            <input type="search" class="buscador" placeholder="Buscar visitante">
+          </label>
+          <button type="button" class="btn-verde">+ Nuevo visitante</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="tarjeta-tabla" aria-label="Listado de visitantes">
+      <table class="tabla-visitantes">
+        
+        <thead>
+          <tr>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Cedula</th>
+            <th scope="col">Telefono</th>
+            <th scope="col"><span class="sr-only">Acciones</span></th>
+          </tr>
+        </thead>
+        <!--datos de los visitantes-->
+        <tbody>
+          <tr>
+            <td data-label="Nombres">Samuel</td>
+            <td data-label="Apellidos">Olascoaga Hernandez</td>
+            <td data-label="Cedula">1028941655</td>
+            <td data-label="Telefono">3123125789</td>
+            <td class="acciones">
+              <!--iconos de acciones-->
+              <button type="button" class="btn-editar" aria-label="Editar visitante" title="Editar">&#9998;</button>
+              <button type="button" class="btn-eliminar" aria-label="Eliminar visitante" title="Eliminar">&#10005;</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
