@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra lateral</title>
+  <link rel="stylesheet" href="estilos/barraa.css">
+</head>
+<body>
+  <aside class="barra-lateral">
+    <nav class="menu">
+      <a href="inicio.html" class="enlace">Inicio</a>
+      <a href="pagos.html" class="enlace">Pagos</a>
+      <a href="rresidente.html" class="enlace">Registrar Residente</a>
+      <a href="bicicletas.html" class="enlace">Bicicletas</a>
+      <a href="rvisitante.html" class="enlace">Registrar Visitante</a>
+      <a href="torresaptos.html" class="enlace">Torres/Aptos</a>
+      <a href="reportes.html" class="enlace">Gestion reportes</a>
+      <a href="zonas.html" class="enlace">Zonas comunes</a>
+      <a href="vehiculo.html" class="enlace">Vehiculos</a>
+      <a href="usuarios.html" class="enlace">Usuarios</a>
+    </nav>
+    <button type="button" class="boton-salir">Salir</button>
+  </aside>
+</body>
+
+<!-- Contenido principal -->
+<main class="contenido">
+  <header class="encabezado">
+    <div>
+      <h1>Registro de Bicicletas</h1>
+      <p>Gestión de registros de bicicletas</p>
+    </div>
+    <span id="contador">0 registros</span>
+  </header>
+
+  <!--Buscador y boton nueva bicicleta-->
+  <section class="acciones">
+    <input type="text" id="buscar" placeholder="BUSCAR..">
+    <button class="boton nuevo" onclick="abrirModal()">+ Nueva Bicicleta</button>
+  </section>
+
+  <!--Tabla de registros de bicicletas-->
+  <div class="Tabla-contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Cedula</th>
+          <th>Telefono</th>
+          <th>N.serie</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-bicicletas">
+        </tbody>
+    </table>
+  </div>
+</main>
+
+<!--ventana para registrar bicicleta-->
+<div class="fondo-modal" id="modal">
+  <div class="modal">
+    <div class="modal-encabezado">
+      <h3 id="tituloModal">Nueva Bicicleta</h3>
+      <button class="cerrar" onclick="cerrarModal()">X</button>
+      </div>
+      <form id="formulario">
+        <input type="hidden" id="indice">
+        <div class="campos">
+        </div>
+      </form>
+
+      <!--numero de serie-->
+      <div>
+        <label>N.serie</label>
+        <input type="text" id="serie" required>
+      </div>
+
+      <!--color-->
+      <div>
+        <label>Color</label>
+        <select id="color" required>
+          <option value="">Seleccionar</option>
+          <option value="Rojo">Rojo</option>
+          <option value="Negro">Negro</option>
+          <option value="Azul">Azul</option>
+          <option value="Blanco">Blanco</option>
+          <option value="Verde">Verde</option>
+        </select>
+      </div>
+
+      <!--tipo-->
+      <div>
+        <label>Tipo</label>
+        <select id="tipo" required>
+          <option value="">Seleccionar</option>
+          <option>T-001</option>
+          <option>T-002</option>
+          <option>T-003</option>
+        </select>
+      </div>
+
+      <!--aparcamiento-->
+      <div>
+        <label>N. Aparcamiento</label>
+        <select id="aparcamiento" required>
+          <option value="">Seleccionar</option>
+          <option>001</option>
+          <option>002</option>
+          <option>003</option>
+        </select>
+      </div>
+
+      <!--residente-->
+      <div>
+        <label>Residente</label>
+        <select id="residente" required>
+          <option value="">Seleccionar</option>
+        </select>
+      </div>
+  </div>
+  <!--botones-->
+  <div class="botones">
+    <button type="button" class="cancelar" onclick="cerrarModal()">Cancelar</button>
+    <button type="submit" class="guardar">Guardar</button>
+  </div>
+</form>
+</div>
+</div>
+</body>
+
+</html>
