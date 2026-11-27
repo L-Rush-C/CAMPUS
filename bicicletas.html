@@ -1,276 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barra lateral</title>
-  <link rel="stylesheet" href="estilos/barraa.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Bicicletas</title>
+  <link rel="stylesheet" href="estilos/barraa.css" />
+  <tbody Fila-registro></tbody>
 </head>
 <body>
-  <aside class="barra-lateral">
-    <nav class="menu">
-      <a href="inicio.html" class="enlace">Inicio</a>
-      <a href="pagos.html" class="enlace">Pagos</a>
-      <a href="rresidente.html" class="enlace">Registrar Residente</a>
-      <a href="bicicletas.html" class="enlace">Bicicletas</a>
-      <a href="rvisitante.html" class="enlace">Registrar Visitante</a>
-      <a href="torresaptos.html" class="enlace">Torres/Aptos</a>
-      <a href="reportes.html" class="enlace">Gestion reportes</a>
-      <a href="zonas.html" class="enlace">Zonas comunes</a>
-      <a href="vehiculo.html" class="enlace">Vehiculos</a>
-      <a href="usuarios.html" class="enlace">Usuarios</a>
-    </nav>
-    <button type="button" class="boton-salir">Salir</button>
-  </aside>
-</body>
+  <div class="app-layout">
+    <!-- Barra lateral izquierda -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="inicio.html" class="nav-item">Inicio</a>
+        <a href="pagos.html" class="nav-item">Pagos</a>
+        <a href="registrar_residente.html" class="nav-item">Registrar Residente</a>
+        <a href="bicicletas.html" class="nav-item active">Bicicletas</a>
+        <a href="registrar_visitante.html" class="nav-item">Registrar Visitante</a>
+        <a href="torres_aptos.html" class="nav-item">Torres/Aptos</a>
+        <a href="gestion_reportes.html" class="nav-item">Gestion reportes</a>
+        <a href="zonas_comunes.html" class="nav-item">Zonas comunes</a>
+        <a href="vehiculos.html" class="nav-item">Vehículos</a>
+        <a href="usuarios.html" class="nav-item">Usuarios</a>
+      </nav>
 
-<!-- Contenido principal -->
-<main class="contenido">
-  <header class="encabezado">
-    <div>
-      <h1>Registro de Bicicletas</h1>
-      <p>Gestión de registros de bicicletas</p>
-    </div>
-    <span id="contador">0 registros</span>
-  </header>
-
-  <!--Buscador y boton nueva bicicleta-->
-  <section class="acciones">
-    <input type="text" id="buscar" placeholder="BUSCAR..">
-    <button class="boton nuevo" onclick="abrirModal()">+ Nueva Bicicleta</button>
-  </section>
-
-  <!--Tabla de registros de bicicletas-->
-  <div class="Tabla-contenedor">
-    <table>
-      <thead>
-        <tr>
-          <th>Nombres</th>
-          <th>Apellidos</th>
-          <th>Cedula</th>
-          <th>Telefono</th>
-          <th>N.serie</th>
-        </tr>
-      </thead>
-      <tbody id="tabla-bicicletas">
-        </tbody>
-    </table>
-  </div>
-</main>
-
-<!--ventana para registrar bicicleta-->
-<div class="fondo-modal" id="modal">
-  <div class="modal">
-    <div class="modal-encabezado">
-      <h3 id="tituloModal">Nueva Bicicleta</h3>
-      <button class="cerrar" onclick="cerrarModal()">X</button>
+      <div class="sidebar-footer">
+        <a href="logout.html" class="btn-logout">Salir</a>
       </div>
-      <form id="formulario">
-        <input type="hidden" id="indice">
-        <div class="campos">
-        </div>
-      </form>
+    </aside>
 
-<!-- VENTANA DE EDITAR BICICLETA -->
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <section class="panel">
+        <!-- Encabezado superior -->
+        <header class="panel-header">
+          <div class="title-group">
+            <h1>Registro de Bicicletas</h1>
+            <p class="subtitle">Gestion de los bicicletas</p>
+          </div>
+          <span class="record-count">X registros</span>
+        </header>
 
-<div id="modalEditar" class="fondo-modal">
-    <div class="ventana-editar">
-        <button class="cerrar-modal" onclick="cerrarEditar()">x</button>
-        <div class="formulario-editar">
-            <div class="datos-superiores">
-                <div>
-
-                    <label>Nu. Serie</label>
-                    <input type="text" value="38515348234">
-                </div>
-
-                <div>
-                    <label>Color</label>
-                    <input type="text">
-                </div>
-            </div>
-
-            <div class="selecciones">
-                <div class="grupo">
-                    <label>Torre</label>
-                    <button class="activo" onclick="elegir(this)">T-001</button>
-                    <button onclick="elegir(this)">T-002</button>
-                    <button onclick="elegir(this)">T-003</button>
-                </div>
-
-                <div class="grupo">
-                    <label>Piso</label>
-                    <button class="activo" onclick="elegir(this)">P1</button>
-                    <button onclick="elegir(this)">P2</button>
-                    <button onclick="elegir(this)">P3</button>
-                </div>
-
-                <div class="grupo">
-                    <label>Apartamento</label>
-                    <button class="activo" onclick="elegir(this)">101</button>
-                    <button onclick="elegir(this)">102</button>
-                    <button onclick="elegir(this)">103</button>
-                </div>
-
-                <div class="grupo residentes">
-                    <label>Residente</label>
-                    <button class="activo" onclick="elegir(this)">Gabriel Santiago Diaz</button>
-                    <button onclick="elegir(this)">Maria Perez</button>
-                    <button onclick="elegir(this)">Nikole Pinto</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-      <!--numero de serie-->
-      <div>
-        <label>N.serie</label>
-        <input type="text" id="serie" required>
-      </div>
-
-      <!--color-->
-      <div>
-        <label>Color</label>
-        <select id="color" required>
-          <option value="">Seleccionar</option>
-          <option value="Rojo">Rojo</option>
-          <option value="Negro">Negro</option>
-          <option value="Azul">Azul</option>
-          <option value="Blanco">Blanco</option>
-          <option value="Verde">Verde</option>
-        </select>
-      </div>
-
-      <!--tipo-->
-      <div>
-        <label>Tipo</label>
-        <select id="tipo" required>
-          <option value="">Seleccionar</option>
-          <option>T-001</option>
-          <option>T-002</option>
-          <option>T-003</option>
-        </select>
-      </div>
-
-      <!--aparcamiento-->
-      <div>
-        <label>N. Aparcamiento</label>
-        <select id="aparcamiento" required>
-          <option value="">Seleccionar</option>
-          <option>001</option>
-          <option>002</option>
-          <option>003</option>
-        </select>
-      </div>
-
-  <!--botones-->
-  <div class="botones">
-    <button type="button" class="cancelar" onclick="cerrarModal()">Cancelar</button>
-    <button type="submit" class="guardar">Guardar</button>
-  </div>
-</form>
-</div>
-</div>
-
-<!--Torre-->
-<div class="grupo">
-  <label>Torre</label>
-  <div class="opcion">
-    <label class="opcion">
-        <input type="radio" name="torre" value="T-001" required>
-    <span>T-001</span>
-    </label>
-
-    <label class="opcion">
-        <input type="radio" name="torre" value="T-002" required>
-    <span>T-002</span>
-    </label>
-
-    <label class="opcion">
-        <input type="radio" name="torre" value="T-003" required>
-    <span>T-003</span>
-    </label>
-</div>
-</div>
-
-<!--Piso-->
-<div class="grupo">
-  <label>Piso</label>
-    <div class="opcion">
-        <label class="opcion">
-            <input type="radio" name="piso" value="P1" required>
-            <span>P1</span>
-            </label>
-
-        <label class="opcion">
-            <input type="radio" name="piso" value="P2" required>
-            <span>P2</span>
-            </label>
-        <label class="opcion">
-            <input type="radio" name="piso" value="P3" required>
-            <span>P3</span>
-            </label>
-
-<!--Apartamento-->
-<div class="grupo">
-  <label>Apartamento</label>
-    <div class="opcion">
-        <label class="opcion">
-            <input type="radio" name="apartamento" value="101" required> 
-            <span>101</span>
-        </label>
-    
-        <label class="opcion">
-            <input type="radio" name="apartamento" value="102" required>
-            <span>102</span>
-        </label>
-
-        <label class="opcion">
-            <input type="radio" name="apartamento" value="103" required>
-            <span>103</span>
-        </label>
-    </div>
-</div>
-
-<!--residente-->
-<div class="grupo">
-  <label>Residente</label>
-    <div class="opcion">
-        <label class="opcion">
-            <input type="radio" name="residente" value="Gabriel Diaz" required>
-            <span>Gabriel Diaz</span>
-        </label>
-
-        <label class="opcion">
-            <input type="radio" name="residente" value="Maria Perez" required>
-            <span>Maria Perez</span>
-        </label>
-
-       <label class="opcion">
-                <input type="radio" name="residente"
-                value="Nikole Pinto" required>
-                <span>Nikole Pinto</span>
-            </label>
+        <!-- Barra de búsqueda y botón crear -->
+        <div class="toolbar">
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Buscar.."
+            aria-label="Buscar bicicletas"
+          />
+          <a href="#" class="btn-primary">+ Nueva bicicleta</a>
         </div>
 
         
-        <!-- Cierra grupo de residentes -->
-    </div>
-    <!-- Cierra contenedor de las columnas -->
-    <!-- BOTONES -->
-    <div class="botones">
-        <button type="button" class="cancelar"
-        onclick="cerrarModal()">Cancelar</button>
-        <button type="submit" class="guardar">Guardar</button>
-    </div>
-</form>
-</div>
 
-<!-- Cierra modal -->
-</div>
+        <!-- Tabla de registros -->
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>nombres</th>
+                <th>apellidos</th>
+                <th>cedula</th>
+                <th>telefono</th>
+                <th>N serie</th>
+                <th class="actions-col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gabriel Santiago</td>
+                <td>Diaz Rodriguez</td>
+                <td>123456789</td>
+                <td>3123125789</td>
+                <td>678534212</td>
+                <td class="actions-cell">
+                  <button type="button" class="btn-action btn-edit" title="Editar" aria-label="Editar">
+                    <!-- Ícono editar (SVG sin JS) -->
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M12 20h9" />
+                      <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="btn-action btn-delete" title="Eliminar" aria-label="Eliminar">
+                    <!-- Ícono eliminar -->
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4">
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
 
-<!-- Cierra fondo modal -->
+              <tr>
+                <td>Laura Daniela</td>
+                <td>Molina muñoz</td>
+                <td>465484515</td>
+                <td>6548946784</td>
+                <td>878789764</td>
+                <td class="actions-cell">
+                  <button type="button" class="btn-action btn-edit" title="Editar" aria-label="Editar">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M12 20h9" />
+                      <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="btn-action btn-delete" title="Eliminar" aria-label="Eliminar">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4">
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
-
 </html>
