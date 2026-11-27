@@ -369,3 +369,200 @@ tr:hover td {
         min-width: 580px;
     }
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eeeeee;
+    padding: 40px;
+}
+
+.contenedor {
+    background: white;
+    padding: 35px;
+    min-height: 500px;
+    border-radius: 12px;
+}
+
+.contenedor h1 {
+    color: #30323b;
+    margin-bottom: 12px;
+}
+
+.contenedor h3 {
+    color: #92949a;
+}
+
+.btn-editar {
+    background: #9cf3a5;
+    border: none;
+    padding: 15px 35px;
+    font-size: 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+/* FONDO DEL MODAL */
+
+.fondo-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.modal {
+    background: #f7f7f7;
+    width: 100%;
+    max-width: 720px;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    right: 15px;
+    top: -40px;
+    background: #fff;
+    color: #888;
+    border: none;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* CAMPOS */
+
+.campo {
+    display: inline-block;
+    width: 48%;
+    margin-bottom: 15px;
+}
+
+.campo label,
+.grupo label {
+    display: block;
+    color: #777b86;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.campo input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: #eeeeee;
+    border-radius: 7px;
+    padding: 10px;
+    outline: none;
+}
+
+/* COLUMNAS */
+
+.columnas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.grupo {
+    background: #eeeeee;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.opcion {
+    background: white;
+    border-radius: 7px;
+    padding: 10px 6px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    min-height: 35px;
+    color: #555b68;
+    overflow-wrap: anywhere;
+}
+
+.opcion span {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    background: #eeeeee;
+    border-radius: 6px;
+}
+
+.opcion.seleccionada {
+    background: #d8fff2;
+    color: #68a997;
+}
+
+.opcion.seleccionada span {
+    background: #83c4b1;
+}
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.botones button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background: #eeeeee;
+    color: #555;
+}
+
+.btn-guardar {
+    background: #9cf3a5;
+    color: #333;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .columnas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .campo {
+        width: 100%;
+    }
+
+    .modal {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}

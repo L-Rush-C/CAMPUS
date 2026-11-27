@@ -30,3 +30,7 @@ Proyecto en desarrollo para la etapa de análisis y diseño, con documentación 
 
 - Equipo CAMPUS
 - Proyecto de desarrollo para gestión de condominios
+
+
+
+

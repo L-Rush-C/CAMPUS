@@ -71,6 +71,58 @@
         </div>
       </form>
 
+<!-- VENTANA DE EDITAR BICICLETA -->
+
+<div id="modalEditar" class="fondo-modal">
+    <div class="ventana-editar">
+        <button class="cerrar-modal" onclick="cerrarEditar()">x</button>
+        <div class="formulario-editar">
+            <div class="datos-superiores">
+                <div>
+
+                    <label>Nu. Serie</label>
+                    <input type="text" value="38515348234">
+                </div>
+
+                <div>
+                    <label>Color</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="selecciones">
+                <div class="grupo">
+                    <label>Torre</label>
+                    <button class="activo" onclick="elegir(this)">T-001</button>
+                    <button onclick="elegir(this)">T-002</button>
+                    <button onclick="elegir(this)">T-003</button>
+                </div>
+
+                <div class="grupo">
+                    <label>Piso</label>
+                    <button class="activo" onclick="elegir(this)">P1</button>
+                    <button onclick="elegir(this)">P2</button>
+                    <button onclick="elegir(this)">P3</button>
+                </div>
+
+                <div class="grupo">
+                    <label>Apartamento</label>
+                    <button class="activo" onclick="elegir(this)">101</button>
+                    <button onclick="elegir(this)">102</button>
+                    <button onclick="elegir(this)">103</button>
+                </div>
+
+                <div class="grupo residentes">
+                    <label>Residente</label>
+                    <button class="activo" onclick="elegir(this)">Gabriel Santiago Diaz</button>
+                    <button onclick="elegir(this)">Maria Perez</button>
+                    <button onclick="elegir(this)">Nikole Pinto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
       <!--numero de serie-->
       <div>
         <label>N.serie</label>
@@ -112,14 +164,6 @@
         </select>
       </div>
 
-      <!--residente-->
-      <div>
-        <label>Residente</label>
-        <select id="residente" required>
-          <option value="">Seleccionar</option>
-        </select>
-      </div>
-  </div>
   <!--botones-->
   <div class="botones">
     <button type="button" class="cancelar" onclick="cerrarModal()">Cancelar</button>
@@ -128,6 +172,105 @@
 </form>
 </div>
 </div>
+
+<!--Torre-->
+<div class="grupo">
+  <label>Torre</label>
+  <div class="opcion">
+    <label class="opcion">
+        <input type="radio" name="torre" value="T-001" required>
+    <span>T-001</span>
+    </label>
+
+    <label class="opcion">
+        <input type="radio" name="torre" value="T-002" required>
+    <span>T-002</span>
+    </label>
+
+    <label class="opcion">
+        <input type="radio" name="torre" value="T-003" required>
+    <span>T-003</span>
+    </label>
+</div>
+</div>
+
+<!--Piso-->
+<div class="grupo">
+  <label>Piso</label>
+    <div class="opcion">
+        <label class="opcion">
+            <input type="radio" name="piso" value="P1" required>
+            <span>P1</span>
+            </label>
+
+        <label class="opcion">
+            <input type="radio" name="piso" value="P2" required>
+            <span>P2</span>
+            </label>
+        <label class="opcion">
+            <input type="radio" name="piso" value="P3" required>
+            <span>P3</span>
+            </label>
+
+<!--Apartamento-->
+<div class="grupo">
+  <label>Apartamento</label>
+    <div class="opcion">
+        <label class="opcion">
+            <input type="radio" name="apartamento" value="101" required> 
+            <span>101</span>
+        </label>
+    
+        <label class="opcion">
+            <input type="radio" name="apartamento" value="102" required>
+            <span>102</span>
+        </label>
+
+        <label class="opcion">
+            <input type="radio" name="apartamento" value="103" required>
+            <span>103</span>
+        </label>
+    </div>
+</div>
+
+<!--residente-->
+<div class="grupo">
+  <label>Residente</label>
+    <div class="opcion">
+        <label class="opcion">
+            <input type="radio" name="residente" value="Gabriel Diaz" required>
+            <span>Gabriel Diaz</span>
+        </label>
+
+        <label class="opcion">
+            <input type="radio" name="residente" value="Maria Perez" required>
+            <span>Maria Perez</span>
+        </label>
+
+       <label class="opcion">
+                <input type="radio" name="residente"
+                value="Nikole Pinto" required>
+                <span>Nikole Pinto</span>
+            </label>
+        </div>
+
+        
+        <!-- Cierra grupo de residentes -->
+    </div>
+    <!-- Cierra contenedor de las columnas -->
+    <!-- BOTONES -->
+    <div class="botones">
+        <button type="button" class="cancelar"
+        onclick="cerrarModal()">Cancelar</button>
+        <button type="submit" class="guardar">Guardar</button>
+    </div>
+</form>
+</div>
+
+<!-- Cierra modal -->
+</div>
+
+<!-- Cierra fondo modal -->
 </body>
 
 </html>
