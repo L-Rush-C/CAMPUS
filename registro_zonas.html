@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Zonas</title>
+  <link rel="stylesheet" href="estilos/barra.css">
+  <link rel="stylesheet" href="estilos/zonas.css">
+</head>
+
+<body>
+
+  <!-- Modal para registrar una nueva zona -->
+  <input type="checkbox" id="modal-nueva" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-nueva" class="cerrar-zonas">X</label>
+      <h2>Nueva zona</h2>
+
+      <div class="form-zonas">
+        <div class="campo-zonas">
+          <label for="nombre-zona">Nombre de la zona</label>
+          <input id="nombre-zona" type="text" placeholder="Ej. Sala general">
+        </div>
+
+        <div class="campo-zonas">
+          <label for="tamano-zona">Tamaño</label>
+          <input id="tamano-zona" type="text" placeholder="Ej. 22m x 42m">
+        </div>
+
+        <div class="campo-zonas completo">
+          <label for="descripcion-zona">Descripción (opcional)</label>
+          <textarea id="descripcion-zona" placeholder="Descripción de la zona"></textarea>
+        </div>
+
+        <div class="campo-zonas">
+          <label for="hora-abre">Hora de apertura</label>
+          <input id="hora-abre" type="time">
+        </div>
+
+        <div class="campo-zonas">
+          <label for="hora-cierra">Hora de cierre</label>
+          <input id="hora-cierra" type="time">
+        </div>
+
+        <div class="campo-zonas completo">
+          <span class="dias-titulo">Días disponibles</span>
+
+          <div class="dias-zonas">
+            <label><input type="checkbox"> Lunes</label>
+            <label><input type="checkbox"> Martes</label>
+            <label><input type="checkbox"> Miércoles</label>
+            <label><input type="checkbox"> Jueves</label>
+            <label><input type="checkbox"> Viernes</label>
+            <label><input type="checkbox"> Sábado</label>
+            <label><input type="checkbox"> Domingo</label>
+          </div>
+        </div>
+      </div>
+
+      <p class="nota-zonas">El registro es únicamente visual y no se guarda realmente.</p>
+
+      <div class="botones-zonas">
+        <label for="modal-nueva" class="boton-modal boton-cancelar-zonas">Cancelar</label>
+        <label for="modal-nueva" class="boton-modal boton-guardar-zonas">Guardar</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de informacion del salon comunal -->
+  <input type="checkbox" id="modal-detalle-salon" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-detalle-salon" class="cerrar-zonas">X</label>
+      <h2>Información de la zona</h2>
+
+      <div class="form-zonas">
+        <div class="campo-zonas">
+          <label>Nombre de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="Salon comunal" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Tamaño</label>
+          <input class="campo-solo-lectura" type="text" value="25m x 45m" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Horario de atención</label>
+          <input class="campo-solo-lectura" type="text" value="06:00 AM - 11:00 PM" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Días disponibles</label>
+          <input class="campo-solo-lectura" type="text" value="Lunes a domingo" readonly>
+        </div>
+
+        <div class="campo-zonas completo">
+          <label>Reserva relacionada</label>
+          <input class="campo-solo-lectura" type="text" value="Pepe Martin - 19/09/2026 - 06:00 AM a 01:00 PM" readonly>
+        </div>
+      </div>
+
+      <div class="botones-zonas">
+        <label for="modal-detalle-salon" class="boton-modal boton-cancelar-zonas">Cerrar</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de informacion de la zona BBQ -->
+  <input type="checkbox" id="modal-detalle-bbq" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-detalle-bbq" class="cerrar-zonas">X</label>
+      <h2>Información de la zona</h2>
+
+      <div class="form-zonas">
+        <div class="campo-zonas">
+          <label>Nombre de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="Zona BBQ" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Tamaño</label>
+          <input class="campo-solo-lectura" type="text" value="35m x 35m" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Horario de atención</label>
+          <input class="campo-solo-lectura" type="text" value="06:00 AM - 11:00 PM" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Días disponibles</label>
+          <input class="campo-solo-lectura" type="text" value="Lunes, martes, jueves y sábado" readonly>
+        </div>
+
+        <div class="campo-zonas completo">
+          <label>Reserva relacionada</label>
+          <input class="campo-solo-lectura" type="text" value="Daniel Rocha - 29/09/2026 - 06:00 PM a 11:00 PM" readonly>
+        </div>
+      </div>
+
+      <div class="botones-zonas">
+        <label for="modal-detalle-bbq" class="boton-modal boton-cancelar-zonas">Cerrar</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de informacion de la zona de juegos -->
+  <input type="checkbox" id="modal-detalle-juegos" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-detalle-juegos" class="cerrar-zonas">X</label>
+      <h2>Información de la zona</h2>
+
+      <div class="form-zonas">
+        <div class="campo-zonas">
+          <label>Nombre de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="Zona de juegos" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Tamaño</label>
+          <input class="campo-solo-lectura" type="text" value="20m x 21m" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Horario de atención</label>
+          <input class="campo-solo-lectura" type="text" value="06:00 AM - 11:00 PM" readonly>
+        </div>
+
+        <div class="campo-zonas">
+          <label>Días disponibles</label>
+          <input class="campo-solo-lectura" type="text" value="Lunes a domingo" readonly>
+        </div>
+
+        <div class="campo-zonas completo">
+          <label>Reserva relacionada</label>
+          <input class="campo-solo-lectura" type="text" value="Daniela Salas - 20/09/2026 - 01:00 PM a 06:00 PM" readonly>
+        </div>
+      </div>
+
+      <div class="botones-zonas">
+        <label for="modal-detalle-juegos" class="boton-modal boton-cancelar-zonas">Cerrar</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para editar una zona -->
+  <input type="checkbox" id="modal-editar" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-editar" class="cerrar-zonas">X</label>
+      <h2>Editar zona</h2>
+
+      <div class="form-zonas">
+        <div class="campo-zonas">
+          <label for="editar-nombre">Nombre de la zona</label>
+          <input id="editar-nombre" type="text" value="Salon comunal">
+        </div>
+
+        <div class="campo-zonas">
+          <label for="editar-tamano">Tamaño</label>
+          <input id="editar-tamano" type="text" value="25m x 45m">
+        </div>
+
+        <div class="campo-zonas completo">
+          <label for="editar-descripcion">Descripción (opcional)</label>
+          <textarea id="editar-descripcion">Sala para reuniones y actividades.</textarea>
+        </div>
+
+        <div class="campo-zonas">
+          <label for="editar-abre">Hora de apertura</label>
+          <input id="editar-abre" type="time" value="06:00">
+        </div>
+
+        <div class="campo-zonas">
+          <label for="editar-cierra">Hora de cierre</label>
+          <input id="editar-cierra" type="time" value="23:00">
+        </div>
+
+        <div class="campo-zonas completo">
+          <label><input type="checkbox"> Suspender esta zona</label>
+        </div>
+      </div>
+
+      <p class="nota-zonas">Los cambios solo se muestran en este formulario.</p>
+
+      <div class="botones-zonas">
+        <label for="modal-editar" class="boton-modal boton-cancelar-zonas">Cancelar</label>
+        <label for="modal-editar" class="boton-modal boton-guardar-zonas">Guardar</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para confirmar la eliminacion -->
+  <input type="checkbox" id="modal-borrar" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-borrar" class="cerrar-zonas">X</label>
+      <h2>Eliminar zona</h2>
+
+      <p>¿Seguro que quieres eliminar esta zona?</p>
+      <p class="nota-zonas">Esta acción es únicamente visual y no elimina ningún registro.</p>
+
+      <div class="botones-zonas">
+        <label for="modal-borrar" class="boton-modal boton-cancelar-zonas">Cancelar</label>
+        <label for="modal-borrar" class="boton-modal boton-confirmar-zonas">Aceptar</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra lateral -->
+  <aside class="barra-lateral">
+    <nav class="menu">
+      <a href="inicio.html" class="enlace">Inicio</a>
+      <a href="pagos.html" class="enlace">Pagos</a>
+      <a href="registrar_residente.html" class="enlace">Registrar Residente</a>
+      <a href="bicicletas.html" class="enlace">Bicicletas</a>
+      <a href="registrar_visitante.html" class="enlace">Registrar Visitante</a>
+      <a href="torres_aptos.html" class="enlace">Torres/Aptos</a>
+      <a href="gestion_reportes.html" class="enlace">Gestión reportes</a>
+      <a href="registro_zonas.html" class="enlace">Zonas comunes</a>
+
+      <div class="menu-zonas">
+        <a href="registro_zonas.html" class="activo">Registro zonas</a>
+        <a href="solicitud_zonas.html">Solicitud zonas</a>
+      </div>
+
+      <a href="#" class="enlace">Vehículos</a>
+      <a href="#" class="enlace">Usuarios</a>
+    </nav>
+
+    <button type="button" class="boton-salir">Salir</button>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="contenido contenido-zonas">
+    <header class="encabezado encabezado-zonas">
+      <div>
+        <h1>Registro de Zonas</h1>
+        <p>Gestión de zonas comunes</p>
+      </div>
+
+      <div class="acciones-zonas">
+        <span class="cantidad-registros">3 registros</span>
+        <input class="buscar-zonas" type="search" placeholder="Buscar..." aria-label="Buscar zonas">
+        <label for="modal-nueva" class="boton-nuevo">+ Nueva Zona</label>
+      </div>
+    </header>
+
+    <section class="tabla-contenedor">
+      <table class="tabla-zonas">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tamaño</th>
+            <th>Disponibilidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Salon comunal</td>
+            <td>25m x 45m</td>
+            <td>Lunes-Domingo</td>
+            <td class="acciones-fila">
+              <label for="modal-detalle-salon" class="boton-fila boton-info" title="Ver información">i</label>
+              <label for="modal-editar" class="boton-fila boton-editar">Editar</label>
+              <label for="modal-borrar" class="boton-fila boton-borrar" title="Eliminar zona">X</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Zona BBQ</td>
+            <td>35m x 35m</td>
+            <td>Lunes, martes, jueves y sábado</td>
+            <td class="acciones-fila">
+              <label for="modal-detalle-bbq" class="boton-fila boton-info" title="Ver información">i</label>
+              <label for="modal-editar" class="boton-fila boton-editar">Editar</label>
+              <label for="modal-borrar" class="boton-fila boton-borrar" title="Eliminar zona">X</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Zona de juegos</td>
+            <td>20m x 21m</td>
+            <td>Lunes-domingo</td>
+            <td class="acciones-fila">
+              <label for="modal-detalle-juegos" class="boton-fila boton-info" title="Ver información">i</label>
+              <label for="modal-editar" class="boton-fila boton-editar">Editar</label>
+              <label for="modal-borrar" class="boton-fila boton-borrar" title="Eliminar zona">X</label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p class="nota-zonas">La información es de demostración. No se pueden modificar ni eliminar los registros realmente.</p>
+
+    <footer class="pie-pagina">
+      <div class="pie-informacion">
+        <strong>CAMPUS</strong>
+        <span>Gestión residencial</span>
+      </div>
+      <small>&copy; 2026 CAMPUS. Todos los derechos reservados.</small>
+    </footer>
+  </main>
+
+</body>
+</html>

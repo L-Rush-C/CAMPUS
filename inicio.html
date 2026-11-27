@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index Campus</title>
 
+
   <link rel="stylesheet" href="estilos/barra.css">
 </head>
 
@@ -15,14 +16,14 @@
   <!-- BARRA LATERAL -->
   <aside class="barra-lateral">
     <nav class="menu">
-      <a href="#" class="enlace">Inicio</a>
-      <a href="#" class="enlace">Pagos</a>
-      <a href="#" class="enlace">Registrar Residente</a>
-      <a href="#" class="enlace">Bicicletas</a>
-      <a href="#" class="enlace">Registrar Visitante</a>
-      <a href="#" class="enlace">Torres/Aptos</a>
-      <a href="#" class="enlace">Gestion reportes</a>
-      <a href="#" class="enlace">Zonas comunes</a>
+      <a href="inicio.html" class="enlace">Incio</a>
+      <a href="pagos.html" class="enlace">Pagos</a>
+      <a href="registrar_residente.html" class="enlace">Registrar Residente</a>
+      <a href="bicicletas.html" class="enlace">Bicicletas</a>
+      <a href="registrar_visitante.html" class="enlace">Registrar Visitante</a>
+      <a href="torres_aptos.html" class="enlace">Torres/Aptos</a>
+      <a href="gestion_reportes.html" class="enlace">Gestion reportes</a>
+      <a href="registro_zonas.html" class="enlace">Zonas comunes</a>
       <a href="#" class="enlace">Vehiculos</a>
       <a href="#" class="enlace">Usuarios</a>
     </nav>
@@ -35,8 +36,8 @@
 
     <header class="encabezado">
       <div class="titulos">
-        <h1>Inicio</h1>
-        <h3>Gestión de los residentes</h3>
+        <h1>Campus</h1>
+        <h3>Control De Asistencias, Movilidad, Parqueaderos y Usos De Salones.</h3>
       </div>
 
       <label for="nuevo-anuncio" class="boton-publicidad">
@@ -57,7 +58,9 @@
             <label for="confirmar-1" class="boton-eliminar">X</label>
           </div>
 
-          <img src="imagenes/Logo_factura.png" alt="Pagos PSE">
+          <a class="enlace-imagen" href="pagos.html" aria-label="Ir a Pagos en Línea">
+            <img src="imagenes/Logo_factura.png" alt="Pagos PSE">
+          </a>
         </article>
 
         <div class="fondo-modal modal-eliminar">
@@ -81,7 +84,9 @@
             <label for="confirmar-2" class="boton-eliminar">X</label>
           </div>
 
-          <img src="imagenes/Registro.png" alt="Registrarme">
+          <a class="enlace-imagen" href="registro.html" aria-label="Ir a Registrarme">
+            <img src="imagenes/Registro.png" alt="Registrarme">
+          </a>
         </article>
 
         <div class="fondo-modal modal-eliminar">
@@ -105,7 +110,9 @@
             <label for="confirmar-3" class="boton-eliminar">X</label>
           </div>
 
-          <img src="imagenes/Inicio_sesion.png" alt="Iniciar Sesión">
+          <a class="enlace-imagen" href="index.html" aria-label="Ir a Iniciar Sesión">
+            <img src="imagenes/Inicio_sesion.png" alt="Iniciar Sesión">
+          </a>
         </article>
 
         <div class="fondo-modal modal-eliminar">
@@ -127,7 +134,7 @@
         <span>Gestión residencial</span>
       </div>
 
-      
+
 
       <small>&copy; 2026 CAMPUS. Todos los derechos reservados.</small>
     </footer>

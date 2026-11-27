@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitudes de Zonas</title>
+  <link rel="stylesheet" href="estilos/barra.css">
+  <link rel="stylesheet" href="estilos/zonas.css">
+</head>
+<body>
+
+  <!-- Modal de solicitud del salon comunal -->
+  <input type="checkbox" id="modal-solicitud-salon" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-solicitud-salon" class="cerrar-zonas">X</label>
+      <h2>Datos de la solicitud</h2>
+
+      <div class="form-zonas">
+        <div class="campo-zonas">
+          <label>Nombre</label>
+          <input class="campo-solo-lectura" type="text" value="Pepe" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Apellido</label>
+          <input class="campo-solo-lectura" type="text" value="Martin" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Zona reservada</label>
+          <input class="campo-solo-lectura" type="text" value="Salon comunal" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Tamaño de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="25m x 45m" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Fecha reservada</label>
+          <input class="campo-solo-lectura" type="text" value="19/09/2026 (sábado)" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Horario de reserva</label>
+          <input class="campo-solo-lectura" type="text" value="06:00 AM - 01:00 PM" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Horario de atención de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="06:00 AM - 11:00 PM" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Días disponibles</label>
+          <input class="campo-solo-lectura" type="text" value="Lunes a domingo" readonly>
+        </div>
+        <div class="campo-zonas completo">
+          <label>Motivo de la reserva</label>
+          <textarea class="campo-solo-lectura" readonly>Reunión familiar</textarea>
+        </div>
+      </div>
+
+      <div class="botones-zonas">
+        <label for="modal-solicitud-salon" class="boton-modal boton-cancelar-zonas">Cerrar</label>
+        <label for="modal-cancelar" class="boton-modal boton-confirmar-zonas">Cancelar solicitud</label>
+      </div>
+    </div>
+  </div>
+  <!-- Modal de solicitud de la zona de juegos -->
+  <input type="checkbox" id="modal-solicitud-juegos" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-solicitud-juegos" class="cerrar-zonas">X</label>
+      <h2>Datos de la solicitud</h2>
+
+      <div class="form-zonas">
+        <div class="campo-zonas">
+          <label>Nombre</label>
+          <input class="campo-solo-lectura" type="text" value="Daniela" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Apellido</label>
+          <input class="campo-solo-lectura" type="text" value="Salas" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Zona reservada</label>
+          <input class="campo-solo-lectura" type="text" value="Zona de juegos" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Tamaño de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="20m x 21m" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Fecha reservada</label>
+          <input class="campo-solo-lectura" type="text" value="20/09/2026 (domingo)" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Horario de reserva</label>
+          <input class="campo-solo-lectura" type="text" value="01:00 PM - 06:00 PM" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Horario de atención de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="06:00 AM - 11:00 PM" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Días disponibles</label>
+          <input class="campo-solo-lectura" type="text" value="Lunes a domingo" readonly>
+        </div>
+        <div class="campo-zonas completo">
+          <label>Motivo de la reserva</label>
+          <textarea class="campo-solo-lectura" readonly>Actividad con niños</textarea>
+        </div>
+      </div>
+
+      <div class="botones-zonas">
+        <label for="modal-solicitud-juegos" class="boton-modal boton-cancelar-zonas">Cerrar</label>
+        <label for="modal-cancelar" class="boton-modal boton-confirmar-zonas">Cancelar solicitud</label>
+      </div>
+    </div>
+  </div>
+  <!-- Modal de solicitud de la zona BBQ -->
+  <input type="checkbox" id="modal-solicitud-bbq" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-solicitud-bbq" class="cerrar-zonas">X</label>
+      <h2>Datos de la solicitud</h2>
+
+      <div class="form-zonas">
+        <div class="campo-zonas">
+          <label>Nombre</label>
+          <input class="campo-solo-lectura" type="text" value="Daniel" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Apellido</label>
+          <input class="campo-solo-lectura" type="text" value="Rocha" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Zona reservada</label>
+          <input class="campo-solo-lectura" type="text" value="Zona BBQ" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Tamaño de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="35m x 35m" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Fecha reservada</label>
+          <input class="campo-solo-lectura" type="text" value="29/09/2026 (martes)" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Horario de reserva</label>
+          <input class="campo-solo-lectura" type="text" value="06:00 PM - 11:00 PM" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Horario de atención de la zona</label>
+          <input class="campo-solo-lectura" type="text" value="06:00 AM - 11:00 PM" readonly>
+        </div>
+        <div class="campo-zonas">
+          <label>Días disponibles</label>
+          <input class="campo-solo-lectura" type="text" value="Lunes, martes, jueves y sábado" readonly>
+        </div>
+        <div class="campo-zonas completo">
+          <label>Motivo de la reserva</label>
+          <textarea class="campo-solo-lectura" readonly>Parrillada familiar</textarea>
+        </div>
+      </div>
+
+      <div class="botones-zonas">
+        <label for="modal-solicitud-bbq" class="boton-modal boton-cancelar-zonas">Cerrar</label>
+        <label for="modal-cancelar" class="boton-modal boton-confirmar-zonas">Cancelar solicitud</label>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal para confirmar la cancelacion -->
+  <input type="checkbox" id="modal-cancelar" class="control-zonas">
+  <div class="modal-zonas">
+    <div class="ventana-zonas">
+      <label for="modal-cancelar" class="cerrar-zonas">X</label>
+      <h2>Cancelar solicitud</h2>
+
+      <div class="campo-zonas completo">
+        <label for="motivo-cancelar">¿Por qué quieres cancelar esta reserva?</label>
+        <textarea id="motivo-cancelar" placeholder="Escribe el motivo (opcional)"></textarea>
+      </div>
+
+      <p class="nota-zonas">La cancelación es únicamente visual y no se realiza realmente.</p>
+
+      <div class="botones-zonas">
+        <label for="modal-cancelar" class="boton-modal boton-cancelar-zonas">Volver</label>
+        <label for="modal-cancelar" class="boton-modal boton-guardar-zonas">Aceptar</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra lateral -->
+  <aside class="barra-lateral">
+    <nav class="menu">
+      <a href="inicio.html" class="enlace">Inicio</a>
+      <a href="pagos.html" class="enlace">Pagos</a>
+      <a href="registrar_residente.html" class="enlace">Registrar Residente</a>
+      <a href="bicicletas.html" class="enlace">Bicicletas</a>
+      <a href="registrar_visitante.html" class="enlace">Registrar Visitante</a>
+      <a href="torres_aptos.html" class="enlace">Torres/Aptos</a>
+      <a href="gestion_reportes.html" class="enlace">Gestión reportes</a>
+      <a href="registro_zonas.html" class="enlace">Zonas comunes</a>
+
+      <div class="menu-zonas">
+        <a href="registro_zonas.html">Registro zonas</a>
+        <a href="solicitud_zonas.html" class="activo">Solicitud zonas</a>
+      </div>
+
+      <a href="#" class="enlace">Vehículos</a>
+      <a href="#" class="enlace">Usuarios</a>
+    </nav>
+
+    <button type="button" class="boton-salir">Salir</button>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="contenido contenido-zonas">
+    <header class="encabezado encabezado-zonas">
+      <div>
+        <h1>Solicitudes de Zonas</h1>
+        <p>Gestión de zonas comunes</p>
+      </div>
+
+      <div class="acciones-zonas">
+        <span class="cantidad-registros">3 registros</span>
+        <input class="buscar-zonas" type="search" placeholder="Buscar..." aria-label="Buscar solicitudes">
+      </div>
+    </header>
+
+    <section class="tabla-contenedor">
+      <table class="tabla-zonas">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nombre zona</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Pepe</td>
+            <td>Martin</td>
+            <td>Salon comunal</td>
+            <td>19/09/2026</td>
+            <td>6:00am - 1:00pm</td>
+            <td class="acciones-fila">
+              <label for="modal-solicitud-salon" class="boton-fila boton-info" title="Ver información">i</label>
+              <label for="modal-cancelar" class="boton-fila boton-borrar" title="Cancelar solicitud">X</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Daniel</td>
+            <td>Rocha</td>
+            <td>Zona BBQ</td>
+            <td>29/09/2026</td>
+            <td>6:00pm - 11:00pm</td>
+            <td class="acciones-fila">
+              <label for="modal-solicitud-bbq" class="boton-fila boton-info" title="Ver información">i</label>
+              <label for="modal-cancelar" class="boton-fila boton-borrar" title="Cancelar solicitud">X</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Daniela</td>
+            <td>Salas</td>
+            <td>Zona de juegos</td>
+            <td>20/09/2026</td>
+            <td>1:00pm - 6:00pm</td>
+            <td class="acciones-fila">
+              <label for="modal-solicitud-juegos" class="boton-fila boton-info" title="Ver información">i</label>
+              <label for="modal-cancelar" class="boton-fila boton-borrar" title="Cancelar solicitud">X</label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p class="nota-zonas">La información es de demostración y no se pueden filtrar los registros.</p>
+
+    <footer class="pie-pagina">
+      <div class="pie-informacion">
+        <strong>CAMPUS</strong>
+        <span>Gestión residencial</span>
+      </div>
+      <small>&copy; 2026 CAMPUS. Todos los derechos reservados.</small>
+    </footer>
+  </main>
+
+</body>
+
+</html>

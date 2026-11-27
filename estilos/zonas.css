@@ -1,0 +1,412 @@
+
+/* ESTILOS DEL SUBMENU */
+
+.menu-zonas {
+  margin-top: 6px;
+  padding-left: 12px;
+  border-left: 2px solid #70bda9;
+}
+
+.menu-zonas a {
+  display: block;
+  padding: 6px;
+  color: #a3a8b4;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.menu-zonas a:hover,
+.menu-zonas a.activo {
+  color: white;
+  background: #112b36;
+}
+
+.barra-lateral .menu {
+  align-items: stretch;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido-zonas {
+  gap: 18px;
+}
+
+.encabezado-zonas {
+  margin-bottom: 0;
+}
+
+.encabezado-zonas h1 {
+  margin-bottom: 5px;
+  color: #30343c;
+  font-size: 32px;
+}
+
+.encabezado-zonas p {
+  color: #85858d;
+}
+
+.acciones-zonas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cantidad-registros {
+  color: #85858d;
+  font-size: 16px;
+}
+
+.buscar-zonas {
+  width: 160px;
+  padding: 9px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  background: #e2e2e2;
+}
+
+.buscar-zonas:focus {
+  border-color: #70bda9;
+  background: white;
+}
+
+.boton-nuevo {
+  display: inline-block;
+  padding: 9px 13px;
+  border: 0;
+  border-radius: 8px;
+  background: #70bda9;
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton-nuevo:hover {
+  background: #5ca991;
+}
+
+/* TABLA DE REGISTROS */
+
+.tabla-contenedor {
+  min-height: 250px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: white;
+  overflow-x: auto;
+}
+
+.tabla-zonas {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-zonas th,
+.tabla-zonas td {
+  padding: 12px 8px;
+  text-align: left;
+}
+
+.tabla-zonas th {
+  border-bottom: 1px solid #bcbcbc;
+  color: #85858d;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.tabla-zonas td {
+  color: #30343c;
+  font-size: 14px;
+}
+
+.tabla-zonas tbody tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.tabla-zonas tbody tr:hover {
+  background: #e8f2ef;
+}
+
+.acciones-fila {
+  white-space: nowrap;
+  text-align: right !important;
+}
+
+/* BOTONES DE ACCIONES */
+
+.boton-fila {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.boton-info {
+  background: #f2d36e;
+  color: #30343c;
+}
+
+.boton-borrar {
+  background: #ec8589;
+}
+
+.boton-editar {
+  width: auto;
+  padding: 0 10px;
+  background: #70bda9;
+}
+
+.boton-info:hover {
+  background: #e5c354;
+}
+
+.boton-borrar:hover {
+  background: #d96c72;
+}
+
+.boton-editar:hover {
+  background: #5ca991;
+}
+
+/* MENSAJES INFORMATIVOS */
+
+.nota-zonas {
+  color: #777;
+  font-size: 12px;
+}
+
+/* CONTROL DE VENTANAS MODALES */
+
+.control-zonas {
+  display: none;
+}
+
+.modal-zonas {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.45);
+  justify-content: center;
+  align-items: center;
+}
+
+.control-zonas:checked + .modal-zonas {
+  display: flex;
+}
+
+/* VENTANA MODAL */
+
+.ventana-zonas {
+  position: relative;
+  width: 440px;
+  max-width: 100%;
+  max-height: 90vh;
+  padding: 25px 20px 20px;
+  overflow-y: auto;
+  border-radius: 12px;
+  background: white;
+}
+
+.ventana-zonas h2 {
+  margin-bottom: 16px;
+  color: #30343c;
+  font-size: 20px;
+}
+
+.cerrar-zonas {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  color: #777;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cerrar-zonas:hover {
+  color: #30343c;
+}
+
+/* FORMULARIOS */
+
+.form-zonas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.campo-zonas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo-zonas.completo {
+  grid-column: 1 / -1;
+}
+
+.campo-zonas label,
+.dias-titulo {
+  color: #555;
+  font-size: 13px;
+}
+
+.campo-zonas input,
+.campo-zonas textarea,
+.campo-zonas select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  outline: none;
+}
+
+.campo-zonas input:focus,
+.campo-zonas textarea:focus,
+.campo-zonas select:focus {
+  border-color: #70bda9;
+}
+
+.campo-zonas textarea {
+  min-height: 65px;
+  resize: vertical;
+}
+
+.campo-solo-lectura {
+  background: #eeeeee;
+  color: #555;
+}
+
+/* DIAS DISPONIBLES */
+
+.dias-zonas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.dias-zonas label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #555;
+  font-size: 13px;
+}
+
+.dias-zonas input {
+  width: auto;
+}
+
+/* BOTONES DE LOS MODALES */
+
+.botones-zonas {
+  display: flex;
+  margin-top: 18px;
+  gap: 10px;
+}
+
+.boton-modal {
+  flex: 1;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.boton-cancelar-zonas {
+  background: #bcbcbc;
+}
+
+.boton-guardar-zonas {
+  background: #70bda9;
+}
+
+.boton-confirmar-zonas {
+  background: #ec8589;
+}
+
+.boton-cancelar-zonas:hover {
+  background: #a5a5a5;
+}
+
+.boton-guardar-zonas:hover {
+  background: #5ca991;
+}
+
+.boton-confirmar-zonas:hover {
+  background: #d96c72;
+}
+
+/* ADAPTACION A TABLET */
+
+@media (max-width: 750px) {
+  .encabezado-zonas {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .encabezado-zonas h1 {
+    font-size: 25px;
+  }
+
+  .tabla-zonas {
+    min-width: 620px;
+  }
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 500px) {
+  .encabezado-zonas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .acciones-zonas {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .buscar-zonas {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .form-zonas {
+    grid-template-columns: 1fr;
+  }
+
+  .campo-zonas.completo {
+    grid-column: auto;
+  }
+
+  .dias-zonas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .botones-zonas {
+    flex-direction: column;
+  }
+
+  .ventana-zonas {
+    padding: 25px 15px 18px;
+  }
+}
