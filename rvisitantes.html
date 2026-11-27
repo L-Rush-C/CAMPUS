@@ -3,71 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de visitantes</title>
+  <title>Registro de Visitantes</title>
   <link rel="stylesheet" href="estilos/barra.css">
   <link rel="stylesheet" href="estilos/visitantes.css">
 </head>
 <body>
+  <input type="checkbox" id="toggle-menu" class="toggle-oculto">
+  <input type="checkbox" id="toggle-visitantes" class="toggle-oculto">
+  <input type="radio" name="estado-modal" id="modal-cerrado" class="toggle-oculto" checked>
+  <input type="radio" name="estado-modal" id="modal-abierto" class="toggle-oculto">
+  <input type="radio" name="estado-modal" id="modal-guardado" class="toggle-oculto">
+
   <aside class="barra-lateral">
     <nav class="menu">
-      <a href="incio.html" class="enlace">Inicio</a>
-      <a href="pagos.html" class="enlace">Pagos</a>
-      <a href="rresidentes.html" class="enlace">Registrar residente</a>
-      <a href="bicicletas.html" class="enlace">Bicicletas</a>
-      <a href="rvisitantes.html" class="enlace enlace-activo" aria-current="page">Registrar visitante</a>
-      <a href="torresaptos.html" class="enlace">Torres/Aptos</a>
-      <a href="reportes.html" class="enlace">Gestionar reportes</a>
-      <a href="zonas.html" class="enlace">Zonas comunes</a>
-      <a href="vehiculo.html" class="enlace">Vehiculos</a>
-      <a href="usuarios.html" class="enlace">Usuarios</a>
+      <a href="#" class="enlace">Inicio</a>
+      <a href="#" class="enlace">Pagos</a>
+      <a href="#" class="enlace">Registrar Residente</a>
+      <a href="#" class="enlace">Bicicletas</a>
+
+      <label for="toggle-menu" class="enlace">Registrar Visitante</label>
+      <div class="submenu">
+        <label for="toggle-visitantes" class="sub-enlace">Visitantes</label>
+        <a href="asistencia.html" class="sub-enlace">asistencia</a>
+      </div>
+
+      <a href="#" class="enlace">Torres/Aptos</a>
+      <a href="#" class="enlace">Gestion reportes</a>
+      <a href="#" class="enlace">Zonas comunes</a>
+      <a href="#" class="enlace">Vehiculos</a>
+      <a href="#" class="enlace">Usuarios</a>
     </nav>
     <button type="button" class="boton-salir">Salir</button>
   </aside>
+
   <main class="contenido">
     <header class="encabezado">
       <div class="fila-superior">
         <h1>Registro de Visitantes</h1>
+        <label for="modal-abierto" class="btn-mas">+</label>
       </div>
       <div class="fila-inferior">
-        <p class="subtitulo">Gestion de visitantes</p>
-        <div class="controles">
-          <label class="buscador-contenedor">
-            <span class="sr-only">Buscar visitante</span>
-            <input type="search" class="buscador" placeholder="Buscar visitante">
-          </label>
-          <button type="button" class="btn-verde">+ Nuevo visitante</button>
+        <p>Gestion de los visitantes</p>
+        <div class="acciones">
+          <input type="text" class="buscador" placeholder="Buscar..">
+          <label for="modal-abierto" class="btn-nuevo">+ Nuevo Visitante</label>
         </div>
       </div>
     </header>
 
-    <section class="tarjeta-tabla" aria-label="Listado de visitantes">
+    <section class="tarjeta-tabla">
       <table class="tabla-visitantes">
-        
         <thead>
           <tr>
-            <th scope="col">Nombres</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">Cedula</th>
-            <th scope="col">Telefono</th>
-            <th scope="col"><span class="sr-only">Acciones</span></th>
+            <th>nombres</th>
+            <th>apellidos</th>
+            <th>cedula</th>
+            <th>telefono</th>
+            <th></th>
           </tr>
         </thead>
-        <!--datos de los visitantes-->
         <tbody>
-          <tr>
-            <td data-label="Nombres">Samuel</td>
-            <td data-label="Apellidos">Olascoaga Hernandez</td>
-            <td data-label="Cedula">1028941655</td>
-            <td data-label="Telefono">3123125789</td>
-            <td class="acciones">
-              <!--iconos de acciones-->
-              <button type="button" class="btn-editar" aria-label="Editar visitante" title="Editar">&#9998;</button>
-              <button type="button" class="btn-eliminar" aria-label="Eliminar visitante" title="Eliminar">&#10005;</button>
+          <tr class="fila-guardada">
+            <td>tomas yeral</td>
+            <td>martin ramriez</td>
+            <td>123456789</td>
+            <td>3123125789</td>
+            <td class="celda-acciones">
+              <label for="modal-abierto" class="btn-editar">I</label>
+              <label for="modal-cerrado" class="btn-eliminar">X</label>
             </td>
           </tr>
         </tbody>
       </table>
     </section>
   </main>
+
+  <div class="overlay-modal">
+    <div class="modal-contenedor">
+      <div class="pestana-modal">+</div>
+      <label for="modal-cerrado" class="btn-cerrar">X</label>
+
+      <form class="form-modal">
+        <div class="seccion-form">
+          <h3>Datos de Identificación y Contacto</h3>
+
+          <div class="grupo-input">
+            <label>Primer Nombre</label>
+            <input type="text" class="input-modal" placeholder="Ej. Tomás">
+          </div>
+
+          <div class="grupo-input">
+            <label>Segundo Nombre</label>
+            <input type="text" class="input-modal" placeholder="Ej. Yeral">
+          </div>
+
+          <div class="grupo-input">
+            <label>Primer Apellido</label>
+            <input type="text" class="input-modal" placeholder="Ej. Martin">
+          </div>
+
+          <div class="grupo-input">
+            <label>Segundo apellido</label>
+            <input type="text" class="input-modal" placeholder="Ej. Ramírez">
+          </div>
+
+          <div class="grupo-input">
+            <label>Celular</label>
+            <div class="input-prefijo">
+              <span class="prefijo">+57</span>
+              <input type="tel" class="input-modal" placeholder="3123125789">
+            </div>
+          </div>
+
+          <div class="grupo-input">
+            <label>Nu. Identificacion</label>
+            <div class="input-prefijo">
+              <span class="prefijo">CC</span>
+              <input type="text" class="input-modal" placeholder="1234567890">
+            </div>
+          </div>
+        </div>
+
+        <div class="seccion-form">
+          <h3>Datos Vehiculares y de Acceso</h3>
+
+          <div class="grupo-input">
+            <div class="fila-label">
+              <label>Vehiculo</label>
+              <span>Cantidad: 2</span>
+            </div>
+            <select class="select-modal">
+              <option value="carro">Carro</option>
+              <option value="moto">Moto</option>
+              <option value="bicicleta">Bicicleta</option>
+              <option value="ninguno">Ninguno</option>
+            </select>
+          </div>
+
+          <div class="grupo-input">
+            <label>Marca</label>
+            <input type="text" class="input-modal" placeholder="Ej. Toyota">
+          </div>
+
+          <div class="grupo-input">
+            <label>Color</label>
+            <input type="text" class="input-modal" placeholder="Ej. Negro">
+          </div>
+
+          <div class="grupo-input">
+            <label>Nu. Placa</label>
+            <input type="text" class="input-modal" placeholder="Ej. FOQ - 261">
+          </div>
+
+          <div class="grupo-input">
+            <label>Modelo</label>
+            <input type="text" class="input-modal" placeholder="Ej. Corolla">
+          </div>
+
+          <div class="pie-modal">
+            <label for="modal-guardado" class="btn-guardar" title="Guardar Datos">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 15V3m0 12l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+              </svg>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
