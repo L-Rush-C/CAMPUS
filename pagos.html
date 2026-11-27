@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<title>Pagos</title>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barra lateral</title>
+    <link rel="stylesheet" href="estilos/barra.css" />
+    <link rel="stylesheet" href="estilos/pagos.css" />
+</head>
+
+<body>
+    <aside class="barra-lateral">
+        <nav class="menu">
+            <a href="incio.html" class="enlace">Inicio</a>
+            <a href="pagos.html" class="enlace">Pagos</a>
+            <a href="rresidentes.html" class="enlace">Registrar Residente</a>
+            <a href="bicicletas.html" class="enlace">Bicicletas</a>
+            <a href="rvisitantes.html" class="enlace">Registrar Visitante</a>
+            <a href="torresaptos.html" class="enlace">Torres/Aptos</a>
+            <a href="reportes.html" class="enlace">Gestion reportes</a>
+            <a href="zonas.html" class="enlace">Zonas comunes</a>
+            <a href="vehiculo.html" class="enlace">Vehiculos</a>
+            <a href="usuarios.html" class="enlace">Usuarios</a>
+        </nav>
+        <button type="button" class="boton-salir">Salir</button>
+    </aside>
+
+    <!--Los titulos/el lateral derecho superior-->
+    <main class="contenido">
+        <header class="encabezado">
+            <div class="titulos">
+                <h1>Registro de Pagos</h1>
+                <p class="subtitulo">Gestion de pagos de arriendo</p>
+            </div>
+            <div class="controles-superiores">
+                <div class="resumen-pagos">
+                    <span>X pagos</span>
+                    <span>X sin pagar</span>
+                </div>
+            </div>
+        </header>
+
+        <!--Tabla grande y tabla pagos-->
+        <section class="tarjeta-tabla">
+            <table class="tabla-pagos">
+                <thead>
+                    <tr>
+                        <th>nombre</th>
+                        <th>apellido</th>
+                        <th>torre</th>
+                        <th>piso</th>
+                        <th>apartamendo</th>
+                        <th>dias</th>
+                        <th>estado</th>
+                        <!--linea de en medio-->
+                        <th></th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>tomas</td>
+                    <td>martin</td>
+                    <td>T1</td>
+                    <td>P1</td>
+                    <td>101</td>
+                    <td>24</td>
+                    <td class="estado no-pago">No pago</td>
+                    <td>
+                        <!--es el boton-->
+                        <label class="btn-accion">|</label>
+                    </td>
+                </tr>
+                <tr class="fila-alterna">
+                    <td>daniel</td>
+                    <td>rocha</td>
+                    <td>T1</td>
+                    <td>P1</td>
+                    <td>102</td>
+                    <td>28</td>
+                    <td class="estado pago">Pago</td>
+                    <td>
+                        <!--es el boton-->
+                        <label class="btn-accion">|</label>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <div>
+
+    </div>
+</body>
+
+</html>
