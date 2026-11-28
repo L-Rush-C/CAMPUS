@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barra lateral</title>
-  <link rel="stylesheet" href="estilos/barra.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Residentes</title>
+    <link rel="stylesheet" href="estilos/barra.css">
+    <link rel="stylesheet" href="estilos/rresidente.css">
 </head>
+
 <body>
-  <aside class="barra-lateral">
-    <nav class="menu">
-      <a href="#" class="enlace">Inicio</a>
-      <a href="#" class="enlace">Pagos</a>
-      <a href="#" class="enlace">Registrar Residente</a>
-      <a href="#" class="enlace">Bicicletas</a>
-      <a href="#" class="enlace">Registrar Visitante</a>
-      <a href="#" class="enlace">Torres/Aptos</a>
-      <a href="#" class="enlace">Gestion reportes</a>
-      <a href="#" class="enlace">Zonas comunes</a>
-      <a href="#" class="enlace">Vehiculos</a>
-      <a href="#" class="enlace">Usuarios</a>
-    </nav>
-    <button type="button" class="boton-salir">Salir</button>
-  </aside>
+    <aside class="barra-lateral">
+        <nav class="menu">
+            <a href="incio.html" class="enlace">Inicio</a>
+            <a href="pagos.html" class="enlace">Pagos</a>
+            <a href="rresidentes.html" class="enlace">Registrar Residente</a>
+            <a href="bicicletas.html" class="enlace">Bicicletas</a>
+            <a href="rvisitantes.html" class="enlace">Registrar Visitante</a>
+            <a href="torresaptos.html" class="enlace">Torres/Aptos</a>
+            <a href="reportes.html" class="enlace">Gestion reportes</a>
+            <a href="zonas.html" class="enlace">Zonas comunes</a>
+            <a href="vehiculo.html" class="enlace">Vehiculos</a>
+            <a href="usuarios.html" class="enlace">Usuarios</a>
+        </nav>
+        <button type="button" class="boton-salir">Salir</button>
+    </aside>
+
+    <main class="contenido">
+        <header class="encabezado">
+            <div class="titulos">
+                <h1>Registro de Residentes</h1>
+                <p class="subtitulo">Gestion de los residentes</p>
+            </div>
+            <div class="controles-superiores">
+                <p class="resumen-registros">X registros</p>
+                <div class="acciones-superiores">
+                    <label class="solo-lectores" for="buscar-residente">Buscar residente</label>
+                    <input id="buscar-residente" class="campo-busqueda" type="search" placeholder="Buscar...">
+                    <button class="boton-nuevo" type="button">+ Nuevo residente</button>
+                </div>
+            </div>
+        </header>
+        <section class="tarjeta-tabla">
+            <table class="tabla-residentes">
+                <caption class="solo-lectores">Listado visual de residentes</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">nombres</th>
+                        <th scope="col">apellidos</th>
+                        <th scope="col">cedula</th>
+                        <th scope="col">telefono</th>
+                        <th scope="col">torre</th>
+                        <th scope="col">departamento</th>
+                        <th scope="col" aria-label="Acciones"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>tomas yeral</td>
+                        <td>martin ramriez</td>
+                        <td>123456789</td>
+                        <td>3123125789</td>
+                        <td>T1</td>
+                        <td>101</td>
+                        <td class="acciones-fila">
+                            <span class="icono-accion accion-editar" aria-hidden="true">I</span>
+                            <span class="icono-accion accion-eliminar" aria-hidden="true">X</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
 </html>
