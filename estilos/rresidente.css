@@ -99,15 +99,245 @@ body {
 }
 
 .boton-nuevo {
+  display: inline-flex;
+  align-items: center;
   min-height: 41px;
   padding: 5px 10px;
   border: 0;
   border-radius: 12px;
-  background: #62b9ad;
+  background: #41beae;
   color: #fff;
   font: inherit;
   font-size: 20px;
+  text-decoration: none;
   white-space: nowrap;
+}
+
+.boton-nuevo:hover {
+  background: #35aa9b;
+}
+
+.modal-residente {
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-residente:target {
+  display: flex;
+}
+
+.modal-fondo {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 36%);
+}
+
+.modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(452px, 100%);
+  padding: 26px 19px 15px;
+  border-radius: 13px;
+  background: #fff;
+  transform: scale(1.5);
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: -35px;
+  right: -2px;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.formulario-residente {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px 15px;
+}
+
+.campo-modal {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  color: #384052;
+  font-size: 9px;
+}
+
+.campo-modal input,
+.campo-modal select {
+  width: 100%;
+  min-width: 0;
+  height: 18px;
+  padding: 2px 6px;
+  border: 0;
+  border-radius: 5px;
+  outline-color: #41beae;
+  background: #ededed;
+  color: #606776;
+  font: inherit;
+  font-size: 8px;
+}
+
+.campo-modal input::placeholder {
+  color: #9da2aa;
+}
+
+.entrada-prefijo {
+  display: flex;
+  height: 18px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #ededed;
+}
+
+.entrada-prefijo .prefijo {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 0 0px;
+  background: #d7d9de;
+  color: #606776;
+  font-size: 8px;
+}
+
+.entrada-prefijo select.prefijo {
+  width: 0px;
+  min-width: 26px;
+  height: 100%;
+  padding: 0 3px 0 3px;
+  border: 0;
+  border-radius: 0;
+  background: #d7d9de;
+  color: #606776;
+  font: inherit;
+  font-size: 8px;
+}
+
+.entrada-prefijo select.prefijo option {
+  background: #fff;
+  color: #384052;
+  font-size: 8px;
+}
+
+.entrada-prefijo input {
+  height: 100%;
+  background: transparent;
+}
+
+.campo-calidad {
+  grid-column: span 2;
+}
+
+.campo-modal select {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.campo-calidad select {
+  height: 23px;
+  background-color: #cff9ef;
+  color: #399c8f;
+  font-size: 12px;
+}
+
+.campo-calidad option {
+  padding: 5px;
+  background: #fff;
+  color: #606776;
+  font-size: 12px;
+}
+
+.campo-calidad option:checked {
+  background: #cff9ef;
+  color: #399c8f;
+}
+
+.entrada-prefijo .tipo-identificacion {
+  width: 26px;
+  height: 100%;
+  padding: 0px 0px 0px 5px;
+  border: 0;
+  border-radius: 0;
+  background: #d7d9de;
+  color: #384052;
+  font-size: 8px;
+}
+
+.tipo-identificacion option {
+  background: #fff;
+  color: #606776;
+  font-size: 12px;
+}
+
+.selector-ubicacion {
+  min-width: 0;
+  padding: 3px;
+  border: 0;
+  border-radius: 5px;
+  background: #ededed;
+}
+
+
+.selector-ubicacion legend {
+  padding: 0;
+  color: #384052;
+  font-size: 9px;
+  margin: 2px 2px 2px 2px;
+}
+
+.opciones-ubicacion {
+  display: grid;
+  gap: 3px;
+}
+
+.opciones-ubicacion label {
+  display: flex;
+  min-height: 23px;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #606776;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.opciones-ubicacion input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  flex: 0 0 20px;
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.opciones-ubicacion input:checked {
+  border-color: #67bda9;
+  background: #67bda9;
+}
+
+.opciones-ubicacion span {
+  flex: 1;
+  align-self: stretch;
+  padding: 4px 2px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.opciones-ubicacion input:checked + span {
+  background: #cff9ef;
+  color: #399c8f;
 }
 
 .tarjeta-tabla {
@@ -214,6 +444,12 @@ body {
   }
 }
 
+@media (max-width: 760px) {
+  .modal-panel {
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 560px) {
   .barra-lateral {
     flex-basis: 118px;
@@ -248,4 +484,31 @@ body {
   .boton-nuevo {
     font-size: 16px;
   }
+
+  .modal-panel {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .formulario-residente {
+    gap: 7px 8px;
+  }
+
+  .opciones-ubicacion label {
+    font-size: 10px;
+  }
+}
+
+*:focus,
+*:active,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea {
+  caret-color: #606776;
 }

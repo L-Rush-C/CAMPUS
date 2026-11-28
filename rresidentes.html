@@ -36,7 +36,7 @@
                 <div class="acciones-superiores">
                     <label class="solo-lectores" for="buscar-residente">Buscar residente</label>
                     <input id="buscar-residente" class="campo-busqueda" type="search" placeholder="Buscar...">
-                    <button class="boton-nuevo" type="button">+ Nuevo residente</button>
+                    <a class="boton-nuevo" href="#nuevo-residente">+ Nuevo residente</a>
                 </div>
             </div>
         </header>
@@ -71,5 +71,160 @@
             </table>
         </section>
     </main>
+
+    <div class="modal-residente" id="nuevo-residente">
+        <a class="modal-fondo" href="#" aria-label="Cerrar ventana"></a>
+        <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
+            <a class="modal-cerrar" href="#" aria-label="Cerrar ventana">×</a>
+            <h2 class="solo-lectores" id="titulo-modal">Nuevo residente</h2>
+            <div class="formulario-residente">
+                <label class="campo-modal">
+                    <span>Primer Nombre</span>
+                    <input type="text" placeholder="Primer nombre">
+                </label>
+                <label class="campo-modal">
+                    <span>Primer Apellido</span>
+                    <input type="text" placeholder="Primer apellido">
+                </label>
+                <label class="campo-modal">
+                    <span>Celular</span>
+                    <span class="entrada-prefijo">
+                        <select class="prefijo codigo-pais" aria-label="Código de país del celular">
+                            <optgroup label="Colombia"><option value="+57" selected>+57</option></optgroup>
+                            <optgroup label="Estados Unidos y Canadá"><option value="+1">+1</option></optgroup>
+                            <optgroup label="México"><option value="+52">+52</option></optgroup>
+                            <optgroup label="España"><option value="+34">+34</option></optgroup>
+                            <optgroup label="Venezuela"><option value="+58">+58</option></optgroup>
+                            <optgroup label="Ecuador"><option value="+593">+593</option></optgroup>
+                            <optgroup label="Perú"><option value="+51">+51</option></optgroup>
+                            <optgroup label="Brasil"><option value="+55">+55</option></optgroup>
+                            <optgroup label="Argentina"><option value="+54">+54</option></optgroup>
+                            <optgroup label="Chile"><option value="+56">+56</option></optgroup>
+                            <optgroup label="Panamá"><option value="+507">+507</option></optgroup>
+                            <optgroup label="Costa Rica"><option value="+506">+506</option></optgroup>
+                            <optgroup label="Guatemala"><option value="+502">+502</option></optgroup>
+                            <optgroup label="El Salvador"><option value="+503">+503</option></optgroup>
+                            <optgroup label="Honduras"><option value="+504">+504</option></optgroup>
+                            <optgroup label="Nicaragua"><option value="+505">+505</option></optgroup>
+                            <optgroup label="Bolivia"><option value="+591">+591</option></optgroup>
+                            <optgroup label="Paraguay"><option value="+595">+595</option></optgroup>
+                            <optgroup label="Uruguay"><option value="+598">+598</option></optgroup>
+                            <optgroup label="Cuba"><option value="+53">+53</option></optgroup>
+                            <optgroup label="Reino Unido"><option value="+44">+44</option></optgroup>
+                            <optgroup label="Francia"><option value="+33">+33</option></optgroup>
+                            <optgroup label="Alemania"><option value="+49">+49</option></optgroup>
+                            <optgroup label="Italia"><option value="+39">+39</option></optgroup>
+                            <optgroup label="Portugal"><option value="+351">+351</option></optgroup>
+                            <optgroup label="Países Bajos"><option value="+31">+31</option></optgroup>
+                            <optgroup label="Suiza"><option value="+41">+41</option></optgroup>
+                            <optgroup label="Australia"><option value="+61">+61</option></optgroup>
+                            <optgroup label="Japón"><option value="+81">+81</option></optgroup>
+                            <optgroup label="Corea del Sur"><option value="+82">+82</option></optgroup>
+                            <optgroup label="China"><option value="+86">+86</option></optgroup>
+                            <optgroup label="India"><option value="+91">+91</option></optgroup>
+                            <optgroup label="Emiratos Árabes Unidos"><option value="+971">+971</option></optgroup>
+                        </select>
+                        <input type="tel" placeholder="3123456789">
+                    </span>
+                </label>
+
+                <label class="campo-modal">
+                    <span>Segundo Nombre</span>
+                    <input type="text" placeholder="Segundo nombre">
+                </label>
+                <label class="campo-modal">
+                    <span>Segundo apellido</span>
+                    <input type="text" placeholder="Segundo apellido">
+                </label>
+                <label class="campo-modal">
+                    <span>Nu. Identificacion</span>
+                    <span class="entrada-prefijo">
+                        <select class="tipo-identificacion" aria-label="Tipo de identificación">
+                            <option selected>CC</option>
+                            <option>TI</option>
+                            <option>CE</option>
+                            <option>PA</option>
+                        </select>
+                        <input type="text" placeholder="1234567890">
+                    </span>
+                </label>
+
+                <label class="campo-modal">
+                    <span>Telefono</span>
+                    <span class="entrada-prefijo">
+                        <select class="prefijo codigo-pais" aria-label="Código de país del teléfono">
+                            <optgroup label="Colombia"><option value="+57" selected>+57</option></optgroup>
+                            <optgroup label="Estados Unidos y Canadá"><option value="+1">+1</option></optgroup>
+                            <optgroup label="México"><option value="+52">+52</option></optgroup>
+                            <optgroup label="España"><option value="+34">+34</option></optgroup>
+                            <optgroup label="Venezuela"><option value="+58">+58</option></optgroup>
+                            <optgroup label="Ecuador"><option value="+593">+593</option></optgroup>
+                            <optgroup label="Perú"><option value="+51">+51</option></optgroup>
+                            <optgroup label="Brasil"><option value="+55">+55</option></optgroup>
+                            <optgroup label="Argentina"><option value="+54">+54</option></optgroup>
+                            <optgroup label="Chile"><option value="+56">+56</option></optgroup>
+                            <optgroup label="Panamá"><option value="+507">+507</option></optgroup>
+                            <optgroup label="Costa Rica"><option value="+506">+506</option></optgroup>
+                            <optgroup label="Guatemala"><option value="+502">+502</option></optgroup>
+                            <optgroup label="El Salvador"><option value="+503">+503</option></optgroup>
+                            <optgroup label="Honduras"><option value="+504">+504</option></optgroup>
+                            <optgroup label="Nicaragua"><option value="+505">+505</option></optgroup>
+                            <optgroup label="Bolivia"><option value="+591">+591</option></optgroup>
+                            <optgroup label="Paraguay"><option value="+595">+595</option></optgroup>
+                            <optgroup label="Uruguay"><option value="+598">+598</option></optgroup>
+                            <optgroup label="Cuba"><option value="+53">+53</option></optgroup>
+                            <optgroup label="Reino Unido"><option value="+44">+44</option></optgroup>
+                            <optgroup label="Francia"><option value="+33">+33</option></optgroup>
+                            <optgroup label="Alemania"><option value="+49">+49</option></optgroup>
+                            <optgroup label="Italia"><option value="+39">+39</option></optgroup>
+                            <optgroup label="Portugal"><option value="+351">+351</option></optgroup>
+                            <optgroup label="Países Bajos"><option value="+31">+31</option></optgroup>
+                            <optgroup label="Suiza"><option value="+41">+41</option></optgroup>
+                            <optgroup label="Australia"><option value="+61">+61</option></optgroup>
+                            <optgroup label="Japón"><option value="+81">+81</option></optgroup>
+                            <optgroup label="Corea del Sur"><option value="+82">+82</option></optgroup>
+                            <optgroup label="China"><option value="+86">+86</option></optgroup>
+                            <optgroup label="India"><option value="+91">+91</option></optgroup>
+                            <optgroup label="Emiratos Árabes Unidos"><option value="+971">+971</option></optgroup>
+                        </select>
+                        <input type="tel" placeholder="3987654321">
+                    </span>
+                </label>
+                <label class="campo-modal campo-calidad">
+                    <span>Calidad del residente</span>
+                    <select>
+                        <option>Propietario residente</option>
+                        <option>Arrendatario</option>
+                        <option>Familiar</option>
+                    </select>
+                </label>
+
+                <fieldset class="selector-ubicacion">
+                    <div class="opciones-ubicacion">
+                        <legend>Nu. Torre</legend>
+                        <label><input type="radio" name="torre" checked><span>T-001</span></label>
+                        <label><input type="radio" name="torre"><span>T-002</span></label>
+                        <label><input type="radio" name="torre"><span>T-003</span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="selector-ubicacion">
+                    <div class="opciones-ubicacion">
+                        <legend>Nu. Piso</legend>
+                        <label><input type="radio" name="piso" checked><span>P1</span></label>
+                        <label><input type="radio" name="piso"><span>P2</span></label>
+                        <label><input type="radio" name="piso"><span>P3</span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="selector-ubicacion">
+                    <div class="opciones-ubicacion">
+                        <legend>Nu. Apartamento</legend>
+                        <label><input type="radio" name="apartamento" checked><span>101</span></label>
+                        <label><input type="radio" name="apartamento"><span>102</span></label>
+                        <label><input type="radio" name="apartamento"><span>103</span></label>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
