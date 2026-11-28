@@ -1,20 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<title>Pagos</title>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barra lateral</title>
-    <link rel="stylesheet" href="estilos/barra.css" />
-    <link rel="stylesheet" href="estilos/pagos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pagos</title>
+    <link rel="stylesheet" href="estilos/barra.css">
+    <link rel="stylesheet" href="estilos/pagos.css">
 </head>
 
 <body>
     <aside class="barra-lateral">
         <nav class="menu">
             <a href="incio.html" class="enlace">Inicio</a>
-            <a href="pagos.html" class="enlace">Pagos</a>
+            <a href="pagos.html" class="enlace activo">Pagos</a>
             <a href="rresidentes.html" class="enlace">Registrar Residente</a>
             <a href="bicicletas.html" class="enlace">Bicicletas</a>
             <a href="rvisitantes.html" class="enlace">Registrar Visitante</a>
@@ -27,22 +26,25 @@
         <button type="button" class="boton-salir">Salir</button>
     </aside>
 
-    <!--Los titulos/el lateral derecho superior-->
     <main class="contenido">
         <header class="encabezado">
             <div class="titulos">
                 <h1>Registro de Pagos</h1>
                 <p class="subtitulo">Gestion de pagos de arriendo</p>
             </div>
+
             <div class="controles-superiores">
                 <div class="resumen-pagos">
                     <span>X pagos</span>
                     <span>X sin pagar</span>
                 </div>
+                <input type="text" class="buscador" placeholder="Buscar..">
             </div>
         </header>
 
-        <!--Tabla grande y tabla pagos-->
+        <!-- Interruptor oculto para abrir/cerrar la pestaña sin JS -->
+        <input type="checkbox" id="toggle-modal" style="display: none;">
+
         <section class="tarjeta-tabla">
             <table class="tabla-pagos">
                 <thead>
@@ -54,42 +56,120 @@
                         <th>apartamendo</th>
                         <th>dias</th>
                         <th>estado</th>
-                        <!--linea de en medio-->
                         <th></th>
                     </tr>
                 </thead>
-                <tr>
-                    <td>tomas</td>
-                    <td>martin</td>
-                    <td>T1</td>
-                    <td>P1</td>
-                    <td>101</td>
-                    <td>24</td>
-                    <td class="estado no-pago">No pago</td>
-                    <td>
-                        <!--es el boton-->
-                        <label class="btn-accion">|</label>
-                    </td>
-                </tr>
-                <tr class="fila-alterna">
-                    <td>daniel</td>
-                    <td>rocha</td>
-                    <td>T1</td>
-                    <td>P1</td>
-                    <td>102</td>
-                    <td>28</td>
-                    <td class="estado pago">Pago</td>
-                    <td>
-                        <!--es el boton-->
-                        <label class="btn-accion">|</label>
-                    </td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>tomas</td>
+                        <td>martin</td>
+                        <td>T1</td>
+                        <td>P1</td>
+                        <td>101</td>
+                        <td>24</td>
+                        <td class="estado no-pago">No pago</td>
+                        <td>
+                            <label for="toggle-modal" class="btn-accion">|</label>
+                        </td>
+                    </tr>
+                    <tr class="fila-alterna">
+                        <td>daniel</td>
+                        <td>rocha</td>
+                        <td>T1</td>
+                        <td>P1</td>
+                        <td>102</td>
+                        <td>28</td>
+                        <td class="estado pago">Pago</td>
+                        <td>
+                            <label for="toggle-modal" class="btn-accion">|</label>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </section>
-    </main>
-    <div>
 
-    </div>
+        <!-- Pestaña emergente de información (solo lectura) -->
+        <div class="modal-overlay">
+            <div class="modal-caja">
+                <div class="pestana-info">|</div>
+                <label for="toggle-modal" class="pestana-cerrar">X</label>
+
+                <div class="modal-cuerpo">
+                    <div class="grid-datos">
+                        <div class="dato">
+                            <span class="etiqueta">Primer Nombre</span>
+                            <span class="valor">tomas</span>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">Primer Apellido</span>
+                            <span class="valor">martin</span>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">Torre</span>
+                            <span class="valor">T-001</span>
+                        </div>
+
+                        <div class="dato">
+                            <span class="etiqueta">Segundo Nombre</span>
+                            <span class="valor">yair</span>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">Segundo apellido</span>
+                            <span class="valor">ramirez</span>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">Piso</span>
+                            <span class="valor">P1</span>
+                        </div>
+
+                        <div class="dato">
+                            <span class="etiqueta">Celular</span>
+                            <div class="caja-valor">
+                                <span class="prefijo">+57</span>
+                                <span class="valor-sin-fondo">3123456789</span>
+                            </div>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">Telefono</span>
+                            <div class="caja-valor">
+                                <span class="prefijo">+57</span>
+                                <span class="valor-sin-fondo">3567654321</span>
+                            </div>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">Apartamento</span>
+                            <span class="valor">101</span>
+                        </div>
+
+                        <div class="dato">
+                            <span class="etiqueta">Nu. Identificacion</span>
+                            <div class="caja-valor">
+                                <span class="prefijo">CC</span>
+                                <span class="valor-sin-fondo">1234567890</span>
+                            </div>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">fecha ingreso</span>
+                            <span class="valor">12/06/2025</span>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">Dias faltantes</span>
+                            <span class="valor">24</span>
+                        </div>
+
+                        <div class="dato">
+                            <span class="etiqueta">Estado de pago</span>
+                            <span class="valor">No pago</span>
+                        </div>
+                        <div class="dato">
+                            <span class="etiqueta">Confirmar que ya pago</span>
+                            <button type="button" class="btn-confirmar">Confirmar pago</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

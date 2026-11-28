@@ -105,16 +105,9 @@ todas conforman y le dan el estilo la forma a la tabla de pagos*/
   justify-content: center;
 }
 
-.window {
-  width: 50%;
-  height: 50%;
-  background-color: #fff;
-}
-
-#window {
-  width: 50%;
-  height: 50%;
-  background-color: #fff;
+/*funciona para la pantalla que se abre de info*/
+#toggle-modal:checked ~ .modal-overlay {
+  display: flex;
 }
 
 /* Fondo oscuro que cubre la pantalla */
@@ -245,6 +238,23 @@ todas conforman y le dan el estilo la forma a la tabla de pagos*/
 .btn-confirmar:hover {
   background: #58c940;
 }
+
+
+.campo-busqueda {
+  width: 219px;
+  height: 27px;
+  padding: 4px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: #d8d8d8;
+  color: #0e1628;
+  font: inherit;
+  font-size: 14px;
+}
+
+
+
+
 
 
 
