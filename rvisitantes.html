@@ -13,6 +13,8 @@
   <input type="radio" name="estado-modal" id="modal-cerrado" class="toggle-oculto" checked>
   <input type="radio" name="estado-modal" id="modal-abierto" class="toggle-oculto">
   <input type="radio" name="estado-modal" id="modal-guardado" class="toggle-oculto">
+  <input type="radio" name="estado-modal" id="modal-eliminar" class="toggle-oculto">
+  <input type="radio" name="estado-modal" id="modal-ver" class="toggle-oculto">
 
   <aside class="barra-lateral">
     <nav class="menu">
@@ -39,7 +41,7 @@
   <main class="contenido">
     <header class="encabezado">
       <div class="fila-superior">
-        <h1>Registro de Visitantes</h1>
+        <h1 style="font-weight: 700;">Registro de Visitantes</h1>
         <label for="modal-abierto" class="btn-mas">+</label>
       </div>
       <div class="fila-inferior">
@@ -69,8 +71,8 @@
             <td>123456789</td>
             <td>3123125789</td>
             <td class="celda-acciones">
-              <label for="modal-abierto" class="btn-editar">I</label>
-              <label for="modal-cerrado" class="btn-eliminar">X</label>
+              <label for="modal-ver" class="btn-editar">I</label>
+              <label for="modal-eliminar" class="btn-eliminar">X</label>
             </td>
           </tr>
         </tbody>
@@ -169,6 +171,111 @@
           </div>
         </div>
       </form>
+    </div>
+  </div>
+
+  <div class="overlay-ver">
+    <div class="modal-contenedor">
+      <div class="pestana-ver">I</div>
+      <label for="modal-guardado" class="btn-cerrar">X</label>
+
+      <form class="form-modal">
+        <div class="seccion-form">
+          <h3>Datos de Identificación y Contacto</h3>
+
+          <div class="grupo-input">
+            <label>Primer Nombre</label>
+            <input type="text" class="input-modal" value="Tomás" readonly>
+          </div>
+
+          <div class="grupo-input">
+            <label>Segundo Nombre</label>
+            <input type="text" class="input-modal" value="Yeral" readonly>
+          </div>
+
+          <div class="grupo-input">
+            <label>Primer Apellido</label>
+            <input type="text" class="input-modal" value="Martin" readonly>
+          </div>
+
+          <div class="grupo-input">
+            <label>Segundo apellido</label>
+            <input type="text" class="input-modal" value="Ramírez" readonly>
+          </div>
+
+          <div class="grupo-input">
+            <label>Celular</label>
+            <div class="input-prefijo">
+              <span class="prefijo">+57</span>
+              <input type="tel" class="input-modal" value="3123125789" readonly>
+            </div>
+          </div>
+
+          <div class="grupo-input">
+            <label>Telefono</label>
+            <div class="input-prefijo">
+              <span class="prefijo">+57</span>
+              <input type="tel" class="input-modal" value="3987654321" readonly>
+            </div>
+          </div>
+
+          <div class="grupo-input">
+            <label>Nu. Identificacion</label>
+            <div class="input-prefijo">
+              <span class="prefijo">CC</span>
+              <input type="text" class="input-modal" value="1234567890" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="seccion-form">
+          <h3>Datos Vehiculares y de Acceso</h3>
+
+          <div class="grupo-input">
+            <label>Vehiculo</label>
+            <input type="text" class="input-modal" value="Carro" readonly>
+          </div>
+
+          <div class="grupo-input">
+            <label>Marca</label>
+            <input type="text" class="input-modal" value="Toyota" readonly>
+          </div>
+
+          <div class="grupo-input">
+            <label>Color</label>
+            <input type="text" class="input-modal" value="Negro" readonly>
+          </div>
+
+          <div class="grupo-input">
+            <label>Nu. Placa</label>
+            <input type="text" class="input-modal" value="FOQ - 261" readonly>
+          </div>
+
+          <div class="grupo-input">
+            <label>Modelo</label>
+            <input type="text" class="input-modal" value="Corolla" readonly>
+          </div>
+
+          <div class="pie-modal">
+            <button type="button" class="btn-lapiz" title="Editar Datos">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="overlay-eliminar">
+    <div class="modal-eliminar">
+      <p>Seguro quieres eliminar este visitante?</p>
+      <div class="acciones-eliminar">
+        <label for="modal-guardado" class="btn-cancelar-eliminar">Cancelar</label>
+        <label for="modal-cerrado" class="btn-aceptar-eliminar">Aceptar</label>
+      </div>
     </div>
   </div>
 </body>

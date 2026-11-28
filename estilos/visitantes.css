@@ -117,7 +117,9 @@
   display: none;
 }
 
-#modal-guardado:checked ~ .contenido .fila-guardada {
+#modal-guardado:checked ~ .contenido .fila-guardada,
+#modal-eliminar:checked ~ .contenido .fila-guardada,
+#modal-ver:checked ~ .contenido .fila-guardada {
   display: table-row;
 }
 
@@ -149,7 +151,8 @@
   background: #f07c7c;
 }
 
-.overlay-modal {
+.overlay-modal,
+.overlay-ver {
   position: fixed;
   top: 0;
   left: 0;
@@ -167,6 +170,77 @@
   display: flex;
 }
 
+#modal-ver:checked ~ .overlay-ver {
+  display: flex;
+}
+
+.overlay-eliminar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#modal-eliminar:checked ~ .overlay-eliminar {
+  display: flex;
+}
+
+.modal-eliminar {
+  background: #ffffff;
+  border-radius: 14px;
+  width: 390px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-eliminar p {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.acciones-eliminar {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-cancelar-eliminar,
+.btn-aceptar-eliminar {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-cancelar-eliminar {
+  background: #cccccc;
+}
+
+.btn-cancelar-eliminar:hover {
+  background: #b8b8b8;
+}
+
+.btn-aceptar-eliminar {
+  background: #ff7f7f;
+}
+
+.btn-aceptar-eliminar:hover {
+  background: #f06868;
+}
+
 .modal-contenedor {
   background: #ffffff;
   border-radius: 24px;
@@ -178,17 +252,25 @@
   gap: 24px;
 }
 
-.pestana-modal {
+.pestana-modal,
+.pestana-ver {
   position: absolute;
   top: -38px;
   left: 24px;
-  background: #5fbca9;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 8px 22px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   font-weight: bold;
   font-size: 18px;
+}
+
+.pestana-modal {
+  background: #5fbca9;
+}
+
+.pestana-ver {
+  background: #f7dc6f;
 }
 
 .btn-cerrar {
@@ -255,6 +337,11 @@
   width: 100%;
 }
 
+.input-modal[readonly] {
+  cursor: default;
+  color: #4b5563;
+}
+
 .input-prefijo {
   display: flex;
   align-items: center;
@@ -293,8 +380,8 @@
   margin-top: 8px;
 }
 
-.btn-guardar {
-  background: #5fbca9;
+.btn-guardar,
+.btn-lapiz {
   border: none;
   border-radius: 12px;
   width: 48px;
@@ -305,11 +392,24 @@
   cursor: pointer;
 }
 
+.btn-guardar {
+  background: #5fbca9;
+}
+
 .btn-guardar:hover {
   background: #4da694;
 }
 
-.btn-guardar svg {
+.btn-lapiz {
+  background: #7cf08f;
+}
+
+.btn-lapiz:hover {
+  background: #65db79;
+}
+
+.btn-guardar svg,
+.btn-lapiz svg {
   width: 24px;
   height: 24px;
   fill: none;
